@@ -1,25 +1,23 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
+  <component name="AutoImportSettings">
+    <option name="autoReloadType" value="SELECTIVE" />
+  </component>
   <component name="ChangeListManager">
     <list default="true" id="746eebc3-2ec9-40e6-881f-096e6e66308e" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/modules.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/JogoXadrezGrafo.iml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/Main.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/board/AdjacencyMatrix.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/board/Board.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/board/Graph.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/board/Square.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/chesspiece/ChessPiece.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/chesspiece/Color.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/game/Game.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/game/Move.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/search/BreadthFirstSearch.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/search/DepthFirstSearch.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/search/GraphSearch.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/chesspiece/Bishop.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/chesspiece/IChessPiece.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/chesspiece/King.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/chesspiece/Knight.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/chesspiece/Pawn.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/chesspiece/Position.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/chesspiece/Queen.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/chesspiece/Rook.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/board/AdjacencyMatrix.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/board/AdjacencyMatrix.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/board/Board.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/board/Board.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/board/Graph.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/board/Graph.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/chesspiece/ChessPiece.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/chesspiece/ChessPiece.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -49,6 +47,7 @@
   <component name="PropertiesComponent"><![CDATA[{
   "keyToString": {
     "RunOnceActivity.ShowReadmeOnStart": "true",
+    "SHARE_PROJECT_CONFIGURATION_FILES": "true",
     "git-widget-placeholder": "main",
     "kotlin-language-version-configured": "true",
     "onboarding.tips.debug.path": "C:/Users/manoe/OneDrive/Documentos/Workspace/JogoXadrezGrafo/src/Main.java"
@@ -64,6 +63,17 @@
       <updated>1715268101893</updated>
     </task>
     <servers />
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State />
+          </value>
+        </entry>
+      </map>
+    </option>
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>

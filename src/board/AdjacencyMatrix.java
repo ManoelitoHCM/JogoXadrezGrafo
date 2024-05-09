@@ -1,21 +1,27 @@
 package board;
 
+import chesspiece.ChessPiece;
+import chesspiece.Position;
+
+import java.util.Optional;
+
 public class AdjacencyMatrix implements Graph {
 
     private final int size;
-    private String[] labels;
-    private final int[][] adjacencyMatrix;
+    private Optional<ChessPiece>[][] grid;
+    private final boolean[][] adjacencyMatrix;
 
     private boolean[] visitedNodes;
 
     public AdjacencyMatrix(int size) {
         this.size = size;
-        labels = new String[size];
-        adjacencyMatrix = new int[size][size];
+        grid = new Optional[size][size];
+        adjacencyMatrix = new boolean[size][size];
 
         for (int line = 0; line < size; line++) {
-            for (int column = 0; column < size; column++) {
-                adjacencyMatrix[line][column] = 0;
+            for (int col = 0; col < size; col++) {
+                grid[line][col] = Optional.empty();
+                adjacencyMatrix[line][col] = false;
             }
         }
     }
@@ -25,29 +31,50 @@ public class AdjacencyMatrix implements Graph {
         return size;
     }
 
-    public void insertVertex(int node, String label) {
-        labels[node] = label;
+    public void insertVertex(Position position) {
+        int row = position.getRow();
+        int col = position.getCol();
+        grid[row][col] = Optional.empty();
     }
 
-    public String getLabel(int node) {
-        return labels[node];
+    public void insertPiece(Position position, ChessPiece piece) {
+        int row = position.getRow();
+        int col = position.getCol();
+        grid[row][col] = Optional.of(piece);
     }
 
-    public void insertEdge(int sourceNode, int destinationNode) {
-        if (sourceNode == destinationNode) {
+    public Optional<ChessPiece> getPiece(Position position) {
+        int row = position.getRow();
+        int col = position.getCol();
+        return grid[row][col];
+    }
+
+    public void insertEdge(Position sourcePosition, Position destinationPosition) {
+        if (sourcePosition == destinationPosition) {
             throw new IllegalArgumentException("Jogada inválida: o nó de origem e destino são iguais.");
         }
-        adjacencyMatrix[sourceNode][destinationNode] = 1;
+        int sourceRow = sourcePosition.getRow();
+        int sourceCol = sourcePosition.getCol();
+        int destinationRow = destinationPosition.getRow();
+        int destinationCol = destinationPosition.getCol();
+
+        adjacencyMatrix[sourceRow][sourceCol] = true;
+        adjacencyMatrix[destinationRow][destinationCol] = true;
     }
 
-    public boolean hasEdge(int sourceNode, int destinationNode) {
-        return adjacencyMatrix[sourceNode][destinationNode] != 0;
+    public boolean hasEdge(Position sourcePosition, Position destinationPosition) {
+        int sourceRow = sourcePosition.getRow();
+        int sourceCol = sourcePosition.getCol();
+        int destinationRow = destinationPosition.getRow();
+        int destinationCol = destinationPosition.getCol();
+
+        return adjacencyMatrix[sourceRow][sourceCol] && adjacencyMatrix[destinationRow][destinationCol];
     }
 
     public void showMatrix() {
-        for (int line = 0; line < size; line++) {
-            for (int column = 0; column < size; column++) {
-                System.out.print(adjacencyMatrix[line][column] + " ");
+        for (int row = 0; row < size; row++) {
+            for (int col = 0; col < size; col++) {
+                System.out.print(grid[row][col].isPresent() ? " X " : " - ");
             }
             System.out.println();
         }
