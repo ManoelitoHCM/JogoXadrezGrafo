@@ -1,13 +1,19 @@
 package search;
 
-import board.AdjacencyMatrix;
-import board.Graph;
-
+import board.ChessNode;
+import board.ChessGraph;
 import java.util.LinkedList;
 import java.util.Queue;
 
-public class BreadthFirstSearch implements GraphSearch {
+public class BreadthFirstSearch {
 /*
+
+    public static Queue<ChessNode> findPossibleMoves(ChessNode startNode, ChessGraph board) {
+        Queue<ChessNode> possibleMoves = new LinkedList<>();
+        // Implemente o algoritmo BFS aqui
+        return possibleMoves;
+    }
+
     @Override
     public int search(String value, int sourceNode, Graph graph) {
         AdjacencyMatrix adjacencyMatrix = (AdjacencyMatrix) graph;
@@ -36,6 +42,5 @@ public class BreadthFirstSearch implements GraphSearch {
             }
         }
         return -1;
-    }
-    */
+    }*/
 }

@@ -1,11 +1,6 @@
 package search;
 
-import board.AdjacencyMatrix;
-import board.Graph;
-
-import java.util.Stack;
-
-public class DepthFirstSearch implements GraphSearch {
+public class DepthFirstSearch {
 /*
     @Override
     public int search(String value, int sourceNode, Graph graph) {
