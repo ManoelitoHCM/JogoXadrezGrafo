@@ -4,9 +4,8 @@ import chesspiece.*;
 
 import java.util.HashMap;
 import java.util.Map;
-import java.util.Optional;
 
-public class ChessGraph implements Graph{
+public class ChessGraph implements Graph {
 
     private final int size;
     private final Map<String, ChessNode> nodes;
@@ -19,7 +18,7 @@ public class ChessGraph implements Graph{
         fillNodes();
     }
 
-    public static ChessGraph getInstance() {
+    public static ChessGraph getGraphInstance() {
         if (boardInstance == null) {
             boardInstance = new ChessGraph();
         }

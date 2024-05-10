@@ -3,17 +3,19 @@ package board;
 import java.util.HashMap;
 import java.util.Map;
 
+import static board.ChessGraph.getGraphInstance;
+
 public class AdjacencyMatrix {
 
-    private final int size;
-    private final boolean[][] adjacencyMatrix;
+    private boolean[][] adjacencyMatrix;
+    private static AdjacencyMatrix matrixInstance;
     private final Map<ChessNode, Integer> nodeIndices;
+    private final int size;
 
-    public AdjacencyMatrix(Map<ChessNode, Integer> nodeIndex, ChessGraph board) {
-
-        this.size = ChessGraph.getInstance().getSize();
-        adjacencyMatrix = new boolean[size][size];
-        nodeIndices = new HashMap<>(size * size);
+    private AdjacencyMatrix(int size, Map<ChessNode, Integer> nodeIndices) {
+        this.size = size;
+        this.adjacencyMatrix = new boolean[size][size];
+        this.nodeIndices = new HashMap<>(size * size);
 
         int index = 0;
 
@@ -23,13 +25,22 @@ public class AdjacencyMatrix {
                 adjacencyMatrix[row][col] = false;
 
                 // recuperando nós criados no tabuleiro para mapeamento
-                nodeIndices.put(board.getNode(row, col), index++);
+                nodeIndices.put(getGraphInstance().getNode(row, col), index++);
             }
         }
     }
 
-    public int size() {
-        return size;
+    public static void initializeiMatrix(int size, Map<ChessNode, Integer> nodeIndices) {
+        if (matrixInstance == null) {
+            matrixInstance = new AdjacencyMatrix(size, nodeIndices);
+        }
+    }
+
+    public static AdjacencyMatrix getMatrixInstance() {
+        if (matrixInstance == null) {
+            throw new IllegalStateException("A matriz de adjacências ainda não foi inicializada. Chame o método initialize() primeiro.");
+        }
+        return matrixInstance;
     }
 
     public void insertEdge(ChessNode sourceNode, ChessNode destinationNode) {
