@@ -7,6 +7,7 @@ import java.util.Map;
 import java.util.Optional;
 
 public class ChessGraph implements Graph{
+
     private final int size;
     private final Map<String, ChessNode> nodes;
     private static ChessGraph boardInstance;
@@ -137,22 +138,11 @@ public class ChessGraph implements Graph{
         return nodes.getOrDefault(key, null);
     }
 
-    @Override
-    public void insertEdge(ChessNode sourceNode, ChessNode destinationNode) {
-    }
-
-    @Override
-    public boolean hasEdge(ChessNode sourceNode, ChessNode destinationNode) {
-        return false;
-    }
-
-    @Override
-    public void showMatrix() {
-
-    }
-
     public String generateKey(int row, int col) {
         return row + "_" + col;
     }
 
+    public int getSize() {
+        return size;
+    }
 }

@@ -20,14 +20,7 @@ public interface Graph {
 
     ChessNode getNode(int row, int col);
 
-    void insertEdge(ChessNode sourceNode, ChessNode destinationNode);
-
-    boolean hasEdge(ChessNode sourceNode, ChessNode destinationNode);
-
-    void showMatrix();
-
     String generateKey(int row, int col);
 
     boolean isValidPosition(ChessNode newNode);
 }
-
