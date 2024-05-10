@@ -1,17 +1,16 @@
 package chesspiece;
 
-import board.Board;
-
-import java.util.List;
+import board.ChessGraph;
+import board.ChessNode;
 
 public abstract class ChessPiece implements IChessPiece{
 
     private Color color;
-    private Position position;
+    private ChessNode currentNode;
 
-    public ChessPiece(Color color, Position position) {
+    public ChessPiece(Color color, ChessNode currentNode) {
         this.color = color;
-        this.position = position;
+        this.currentNode = currentNode;
     }
 
     @Override
@@ -25,23 +24,27 @@ public abstract class ChessPiece implements IChessPiece{
     }
 
     @Override
-    public Position getPosition(){
-        return position;
+    public ChessNode getCurrentNode() {
+        return currentNode;
     }
 
     @Override
-    public void setPosition(Position position){
-        this.position = position;
+    public void setCurrentNode(ChessNode currentNode){
+        this.currentNode = currentNode;
     }
 
     @Override
-    public abstract List<Position> getPossibleMoves(Board board);
+    public abstract ChessNode[][] getPossibleMoves(ChessNode[][] board);
 
     @Override
-    public boolean isValidMove(Position position, Position newPosition, Board board){
-        return board.isValidPosition(newPosition);
+    public boolean isValidMove(ChessNode newNode, ChessGraph board){
+        return board.isValidPosition(newNode);
     }
 
     @Override
-    public void move(Position position, Position newPosition){}
+    public void move(ChessNode newNode){
+        this.currentNode.removePiece();
+        this.currentNode = newNode;
+        newNode.setPiece(this);
+    }
 }

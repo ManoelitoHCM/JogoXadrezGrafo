@@ -1,22 +1,21 @@
 package chesspiece;
 
-import board.Board;
-
-import java.util.List;
+import board.ChessGraph;
+import board.ChessNode;
 
 public interface IChessPiece {
     Color getColor();
 
     void setColor(Color color);
 
-    Position getPosition();
+    ChessNode getCurrentNode();
 
-    void setPosition(Position position);
+    void setCurrentNode(ChessNode currentNode);
 
-    List<Position> getPossibleMoves(Board board);
+    ChessNode[][] getPossibleMoves(ChessNode[][] board);
 
-    boolean isValidMove(Position position, Position newPosition, Board board);
+    boolean isValidMove(ChessNode newNode, ChessGraph board);
 
-    void move(Position position, Position newPosition);
+    void move(ChessNode newNode);
 
 }
