@@ -2,8 +2,6 @@ package board;
 
 import chesspiece.*;
 
-import java.util.Optional;
-
 public interface Graph {
 
     void initializeNodes();
