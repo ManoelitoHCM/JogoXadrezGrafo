@@ -1,11 +1,10 @@
 package board;
 
 import chesspiece.ChessPiece;
-import chesspiece.Position;
 
 import java.util.Optional;
 
-public class AdjacencyMatrix implements Graph {
+public class AdjacencyMatrix {
 
     private final int size;
     private Optional<ChessPiece>[][] grid;
@@ -26,47 +25,46 @@ public class AdjacencyMatrix implements Graph {
         }
     }
 
-    @Override
     public int size() {
         return size;
     }
 
-    public void insertVertex(Position position) {
-        int row = position.getRow();
-        int col = position.getCol();
+    public void insertVertex(ChessNode node) {
+        int row = node.getRow();
+        int col = node.getCol();
         grid[row][col] = Optional.empty();
     }
 
-    public void insertPiece(Position position, ChessPiece piece) {
-        int row = position.getRow();
-        int col = position.getCol();
+    public void insertPiece(ChessNode node, ChessPiece piece) {
+        int row = node.getRow();
+        int col = node.getCol();
         grid[row][col] = Optional.of(piece);
     }
 
-    public Optional<ChessPiece> getPiece(Position position) {
-        int row = position.getRow();
-        int col = position.getCol();
+    public Optional<ChessPiece> getPiece(ChessNode node) {
+        int row = node.getRow();
+        int col = node.getCol();
         return grid[row][col];
     }
 
-    public void insertEdge(Position sourcePosition, Position destinationPosition) {
-        if (sourcePosition == destinationPosition) {
+    public void insertEdge(ChessNode sourceNode, ChessNode destinationNode) {
+        if (sourceNode == destinationNode) {
             throw new IllegalArgumentException("Jogada inválida: o nó de origem e destino são iguais.");
         }
-        int sourceRow = sourcePosition.getRow();
-        int sourceCol = sourcePosition.getCol();
-        int destinationRow = destinationPosition.getRow();
-        int destinationCol = destinationPosition.getCol();
+        int sourceRow = sourceNode.getRow();
+        int sourceCol = sourceNode.getCol();
+        int destinationRow = destinationNode.getRow();
+        int destinationCol = destinationNode.getCol();
 
         adjacencyMatrix[sourceRow][sourceCol] = true;
         adjacencyMatrix[destinationRow][destinationCol] = true;
     }
 
-    public boolean hasEdge(Position sourcePosition, Position destinationPosition) {
-        int sourceRow = sourcePosition.getRow();
-        int sourceCol = sourcePosition.getCol();
-        int destinationRow = destinationPosition.getRow();
-        int destinationCol = destinationPosition.getCol();
+    public boolean hasEdge(ChessNode sourceNode, ChessNode destinationNode) {
+        int sourceRow = sourceNode.getRow();
+        int sourceCol = sourceNode.getCol();
+        int destinationRow = destinationNode.getRow();
+        int destinationCol = destinationNode.getCol();
 
         return adjacencyMatrix[sourceRow][sourceCol] && adjacencyMatrix[destinationRow][destinationCol];
     }

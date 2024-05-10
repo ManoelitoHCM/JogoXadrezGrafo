@@ -6,7 +6,7 @@ import board.Graph;
 import java.util.Stack;
 
 public class DepthFirstSearch implements GraphSearch {
-
+/*
     @Override
     public int search(String value, int sourceNode, Graph graph) {
         AdjacencyMatrix adjacencyMatrix = (AdjacencyMatrix) graph;
@@ -31,4 +31,6 @@ public class DepthFirstSearch implements GraphSearch {
         }
         return -1;
     }
+
+ */
 }
