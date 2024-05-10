@@ -4,11 +4,14 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="746eebc3-2ec9-40e6-881f-096e6e66308e" name="Changes" comment="Limpeza da classe AdjacencyMatrix e ChessGraph para melhor alinhar uma à outra, enxugando métodos desnecessarios">
+    <list default="true" id="746eebc3-2ec9-40e6-881f-096e6e66308e" name="Changes" comment="aplicando singleton na matriz de adjacências para ter sempre apenas uma instância dela e do tabuleiro.">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/board/ChessGraph.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/board/ChessGraph.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/board/ChessNode.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/board/ChessNode.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/board/AdjacencyMatrix.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/board/AdjacencyMatrix.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/board/Graph.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/board/Graph.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/chesspiece/Pawn.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/chesspiece/Pawn.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/search/BreadthFirstSearch.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/search/BreadthFirstSearch.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/search/DepthFirstSearch.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/search/DepthFirstSearch.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/search/GraphSearch.java" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -97,7 +100,23 @@
       <option name="project" value="LOCAL" />
       <updated>1715359632337</updated>
     </task>
-    <option name="localTasksCounter" value="5" />
+    <task id="LOCAL-00005" summary="Ajuste nos métodos de adição, remoção e recuperação de peça">
+      <option name="closed" value="true" />
+      <created>1715360417762</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1715360417762</updated>
+    </task>
+    <task id="LOCAL-00006" summary="aplicando singleton na matriz de adjacências para ter sempre apenas uma instância dela e do tabuleiro.">
+      <option name="closed" value="true" />
+      <created>1715363427505</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1715363427505</updated>
+    </task>
+    <option name="localTasksCounter" value="7" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -114,7 +133,9 @@
   <component name="VcsManagerConfiguration">
     <MESSAGE value="Criação da classe ChessGraph e ChessNode para melhor representar um grafo no contexto do xadrez; ajustes nas demais classes para adequação" />
     <MESSAGE value="Limpeza da classe AdjacencyMatrix e ChessGraph para melhor alinhar uma à outra, enxugando métodos desnecessarios" />
-    <option name="LAST_COMMIT_MESSAGE" value="Limpeza da classe AdjacencyMatrix e ChessGraph para melhor alinhar uma à outra, enxugando métodos desnecessarios" />
+    <MESSAGE value="Ajuste nos métodos de adição, remoção e recuperação de peça" />
+    <MESSAGE value="aplicando singleton na matriz de adjacências para ter sempre apenas uma instância dela e do tabuleiro." />
+    <option name="LAST_COMMIT_MESSAGE" value="aplicando singleton na matriz de adjacências para ter sempre apenas uma instância dela e do tabuleiro." />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
