@@ -107,20 +107,6 @@ public class ChessGraph implements Graph{
     }
 
     @Override
-    public void insertPiece(ChessNode node, ChessPiece piece) {
-        if (isValidPosition(node)) {
-            node.setPiece(piece);
-        } else {
-            System.out.println("Posição inválida!");
-        }
-    }
-
-    @Override
-    public Optional<ChessPiece> getPiece(ChessNode node) {
-        return Optional.empty();
-    }
-
-    @Override
     public boolean isValidPosition(ChessNode node) {
         int row = node.getRow();
         int col = node.getCol();

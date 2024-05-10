@@ -12,10 +12,6 @@ public interface Graph {
 
     ChessPiece createPiece(ChessNode node);
 
-    void insertPiece(ChessNode node, ChessPiece piece);
-
-    Optional<ChessPiece> getPiece(ChessNode node);
-
     void addNode(ChessNode node);
 
     ChessNode getNode(int row, int col);

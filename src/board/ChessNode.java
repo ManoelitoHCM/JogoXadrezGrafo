@@ -27,8 +27,8 @@ public class ChessNode {
         return col;
     }
 
-    public Optional<ChessPiece> getPiece() {
-        return piece;
+    public Optional<ChessPiece> getPiece(ChessNode node) {
+        return Optional.empty();
     }
 
     public void setPiece(ChessPiece piece) {
