@@ -30,7 +30,7 @@ public class AdjacencyMatrix {
         }
     }
 
-    public static void initializeiMatrix(int size, Map<ChessNode, Integer> nodeIndices) {
+    public static void initializeMatrix(int size, Map<ChessNode, Integer> nodeIndices) {
         if (matrixInstance == null) {
             matrixInstance = new AdjacencyMatrix(size, nodeIndices);
         }
