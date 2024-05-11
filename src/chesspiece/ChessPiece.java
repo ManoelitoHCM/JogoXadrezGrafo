@@ -32,11 +32,6 @@ public abstract class ChessPiece implements IChessPiece{
     }
 
     @Override
-    public void setCurrentNode(ChessNode currentNode){
-        this.currentNode = currentNode;
-    }
-
-    @Override
     public abstract List<ChessNode> getPossibleMoves();
 
     @Override
