@@ -1,7 +1,6 @@
 package game;
 
 import board.ChessGraph;
-import board.ChessNode;
 import chesspiece.*;
 
 public class Game {
