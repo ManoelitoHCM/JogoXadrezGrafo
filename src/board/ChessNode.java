@@ -28,7 +28,7 @@ public class ChessNode {
     }
 
     public Optional<ChessPiece> getPiece() {
-        return Optional.empty();
+        return piece;
     }
 
     public boolean hasPiece() {
@@ -45,5 +45,10 @@ public class ChessNode {
 
     public Color getColor() {
         return color;
+    }
+
+    @Override
+    public String toString() {
+        return "(row: " + row + ", col: " + col + ")";
     }
 }
