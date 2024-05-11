@@ -140,17 +140,8 @@ public class ChessGraph implements Graph {
     }
 
     @Override
-    public Collection<ChessNode> getNodes() {
-        return nodes.values();
-    }
-
-    @Override
     public String generateKey(int row, int col) {
         return row + "_" + col;
     }
 
-    @Override
-    public int getSize() {
-        return size;
-    }
 }
