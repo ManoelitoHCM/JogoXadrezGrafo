@@ -1,7 +1,10 @@
 package chesspiece;
 
-import board.ChessGraph;
 import board.ChessNode;
+
+import java.util.List;
+
+import static board.ChessGraph.getGraphInstance;
 
 public abstract class ChessPiece implements IChessPiece{
 
@@ -34,11 +37,11 @@ public abstract class ChessPiece implements IChessPiece{
     }
 
     @Override
-    public abstract ChessNode[][] getPossibleMoves(ChessNode[][] board);
+    public abstract List<ChessNode> getPossibleMoves();
 
     @Override
-    public boolean isValidMove(ChessNode newNode, ChessGraph board){
-        return board.isValidPosition(newNode);
+    public boolean isValidMove(ChessNode newNode){
+        return getGraphInstance().isValidPosition(newNode);
     }
 
     @Override
