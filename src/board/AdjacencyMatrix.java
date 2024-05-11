@@ -8,11 +8,10 @@ import static board.ChessGraph.getGraphInstance;
 public class AdjacencyMatrix {
 
     private boolean[][] adjacencyMatrix;
-    private static AdjacencyMatrix matrixInstance;
     private final Map<ChessNode, Integer> nodeIndices;
     private final int size;
 
-    private AdjacencyMatrix(int size, Map<ChessNode, Integer> nodeIndices) {
+    public AdjacencyMatrix(int size, Map<ChessNode, Integer> nodeIndices) {
         this.size = size;
         this.adjacencyMatrix = new boolean[size][size];
         this.nodeIndices = new HashMap<>(size * size);
@@ -28,19 +27,6 @@ public class AdjacencyMatrix {
                 nodeIndices.put(getGraphInstance().getNode(row, col), index++);
             }
         }
-    }
-
-    public static void initializeMatrix(int size, Map<ChessNode, Integer> nodeIndices) {
-        if (matrixInstance == null) {
-            matrixInstance = new AdjacencyMatrix(size, nodeIndices);
-        }
-    }
-
-    public static AdjacencyMatrix getMatrixInstance() {
-        if (matrixInstance == null) {
-            throw new IllegalStateException("A matriz de adjacências ainda não foi inicializada. Chame o método initialize() primeiro.");
-        }
-        return matrixInstance;
     }
 
     public void insertEdge(ChessNode sourceNode, ChessNode destinationNode) {
@@ -63,7 +49,7 @@ public class AdjacencyMatrix {
     public void showMatrix() {
         for (int row = 0; row < size; row++) {
             for (int col = 0; col < size; col++) {
-                System.out.print(adjacencyMatrix[row][col]);
+                System.out.print(adjacencyMatrix[row][col] ? "1 " : "0 ");
             }
             System.out.println();
         }
