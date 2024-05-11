@@ -27,8 +27,12 @@ public class ChessNode {
         return col;
     }
 
-    public Optional<ChessPiece> getPiece(ChessNode node) {
+    public Optional<ChessPiece> getPiece() {
         return Optional.empty();
+    }
+
+    public boolean hasPiece() {
+        return this.getPiece().isPresent();
     }
 
     public void setPiece(ChessPiece piece) {
