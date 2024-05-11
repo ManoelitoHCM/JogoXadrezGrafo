@@ -2,6 +2,7 @@ package board;
 
 import chesspiece.*;
 
+import java.util.Collection;
 import java.util.HashMap;
 import java.util.Map;
 
@@ -70,8 +71,7 @@ public class ChessGraph implements Graph {
         }
     }
 
-    @Override
-    public ChessPiece createPiece(ChessNode node) {
+    private ChessPiece createPiece(ChessNode node) {
         int row = node.getRow();
         int col = node.getCol();
 
@@ -106,6 +106,21 @@ public class ChessGraph implements Graph {
     }
 
     @Override
+    public void display() {
+        for (int row = 0; row < size; row++) {
+            for (int col = 0; col < size; col++) {
+                if (getNode(row, col).hasPiece()) {
+                    System.out.print(getNode(row, col).getPiece().get().getClass().getSimpleName().charAt(0));
+                } else {
+                    System.out.print("-");
+                }
+                System.out.print(" ");
+            }
+            System.out.println();
+        }
+    }
+
+    @Override
     public boolean isValidPosition(ChessNode node) {
         int row = node.getRow();
         int col = node.getCol();
@@ -118,15 +133,23 @@ public class ChessGraph implements Graph {
         nodes.put(key, node);
     }
 
+    @Override
     public ChessNode getNode(int row, int col) {
         String key = generateKey(row, col);
         return nodes.getOrDefault(key, null);
     }
 
+    @Override
+    public Collection<ChessNode> getNodes() {
+        return nodes.values();
+    }
+
+    @Override
     public String generateKey(int row, int col) {
         return row + "_" + col;
     }
 
+    @Override
     public int getSize() {
         return size;
     }
