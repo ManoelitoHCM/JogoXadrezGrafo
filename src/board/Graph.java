@@ -14,11 +14,7 @@ public interface Graph {
 
     ChessNode getNode(int row, int col);
 
-    Collection<ChessNode> getNodes();
-
     String generateKey(int row, int col);
 
     boolean isValidPosition(ChessNode newNode);
-
-    int getSize();
 }

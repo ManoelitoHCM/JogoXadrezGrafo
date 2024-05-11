@@ -11,8 +11,6 @@ public interface IChessPiece {
 
     ChessNode getCurrentNode();
 
-    void setCurrentNode(ChessNode currentNode);
-
     List<ChessNode> getPossibleMoves();
 
     boolean isValidMove(ChessNode newNode);
