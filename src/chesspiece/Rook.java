@@ -2,6 +2,8 @@ package chesspiece;
 
 import board.ChessNode;
 
+import java.util.List;
+
 public class Rook extends ChessPiece {
 
     public Rook(Color color, ChessNode currentNode) {
@@ -9,7 +11,8 @@ public class Rook extends ChessPiece {
     }
 
     @Override
-    public ChessNode[][] getPossibleMoves(ChessNode[][] board) {
-        return new ChessNode[0][];
+    protected int[][] listPossibleMoves() {
+        return null;
     }
+
 }

@@ -12,8 +12,8 @@ public class Pawn extends ChessPiece {
     }
 
     @Override
-    public List<ChessNode> getPossibleMoves() {
-        return List.of();
+    protected int[][] listPossibleMoves() {
+        return null;
     }
 
 }
