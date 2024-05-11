@@ -5,6 +5,7 @@ import chesspiece.*;
 import java.util.Collection;
 import java.util.HashMap;
 import java.util.Map;
+import java.util.Optional;
 
 public class ChessGraph implements Graph {
 
@@ -37,71 +38,72 @@ public class ChessGraph implements Graph {
 
     public void fillNodes() {
         // define as posições iniciais para cada tipo de peça
-        for (int row = 0; row < size; row++) {
-            for (int col = 0; col < size; col++) {
-                ChessNode node = new ChessNode(row, col);
-                addNode(node);
-            }
-        }
-        ChessNode[] initialNodes = {
+        int[][] initialNodes = {
                 // peças brancas
-                new ChessNode(0, 0), new ChessNode(0, 7), // Rooks (Torres)
-                new ChessNode(0, 1), new ChessNode(0, 6), // Knights (Cavalos)
-                new ChessNode(0, 2), new ChessNode(0, 5), // Bishops (Bispos)
-                new ChessNode(0, 3),                               // Queen (Rainha)
-                new ChessNode(0, 4),                               // King (Rei)
-                new ChessNode(1, 0), new ChessNode(1, 1), // Pawns (Peões)
-                new ChessNode(1, 2), new ChessNode(1, 3),
-                new ChessNode(1, 4), new ChessNode(1, 5),
-                new ChessNode(1, 6), new ChessNode(1, 7),
+                {0, 0}, {0, 7}, // rooks (torres)
+                {0, 1}, {0, 6}, // knights (cavalos)
+                {0, 2}, {0, 5}, // bishops (bispos)
+                {0, 3},         // queen (rainha)
+                {0, 4},         // king (rei)
+                {1, 0}, {1, 1}, // pawns (peões)
+                {1, 2}, {1, 3},
+                {1, 4}, {1, 5},
+                {1, 6}, {1, 7},
                 // peças pretas
-                new ChessNode(7, 0), new ChessNode(7, 7), // Rooks (Torres)
-                new ChessNode(7, 1), new ChessNode(7, 6), // Knights (Cavalos)
-                new ChessNode(7, 2), new ChessNode(7, 5), // Bishops (Bispos)
-                new ChessNode(7, 3),                               // Queen (Rainha)
-                new ChessNode(7, 4),                               // King (Rei)
-                new ChessNode(6, 0), new ChessNode(6, 1), // Pawns (Peões)
-                new ChessNode(6, 2), new ChessNode(6, 3),
-                new ChessNode(6, 4), new ChessNode(6, 5),
-                new ChessNode(6, 6), new ChessNode(6, 7),
+                {7, 0}, {7, 7}, // rooks (torres)
+                {7, 1}, {7, 6}, // knights (cavalos)
+                {7, 2}, {7, 5}, // bishops (bispos)
+                {7, 3},         // queen (rainha)
+                {7, 4},         // king (rei)
+                {6, 0}, {6, 1}, // pawns (peões)
+                {6, 2}, {6, 3},
+                {6, 4}, {6, 5},
+                {6, 6}, {6, 7}
         };
 
-        for (ChessNode node : initialNodes) {
-            createPiece(node);
+        for (int[] nodePosition : initialNodes) {
+            ChessNode node = getNode(nodePosition[0], nodePosition[1]);
+
+            if (node != null && !node.hasPiece()) {
+                createPiece(node);
+            }
         }
     }
 
-    private ChessPiece createPiece(ChessNode node) {
+    private void createPiece(ChessNode node) {
+        ChessPiece piece = null;
         int row = node.getRow();
         int col = node.getCol();
 
         // Determina o tipo de peça com base na posição
         if (row == 0 && (col == 0 || col == 7)) {
-            return new Rook(Color.WHITE, node);
+            piece = new Rook(Color.WHITE, node);
         } else if (row == 0 && (col == 1 || col == 6)) {
-            return new Knight(Color.WHITE, node);
+            piece = new Knight(Color.WHITE, node);
         } else if (row == 0 && (col == 2 || col == 5)) {
-            return new Bishop(Color.WHITE, node);
+            piece = new Bishop(Color.WHITE, node);
         } else if (row == 0 && col == 3) {
-            return new Queen(Color.WHITE, node);
+            piece = new Queen(Color.WHITE, node);
         } else if (row == 0 && col == 4) {
-            return new King(Color.WHITE, node);
+            piece = new King(Color.WHITE, node);
         } else if (row == 1) {
-            return new Pawn(Color.WHITE, node);
+            piece = new Pawn(Color.WHITE, node);
         } else if (row == 7 && (col == 0 || col == 7)) {
-            return new Rook(Color.BLACK, node);
+            piece = new Rook(Color.BLACK, node);
         } else if (row == 7 && (col == 1 || col == 6)) {
-            return new Knight(Color.BLACK, node);
+            piece = new Knight(Color.BLACK, node);
         } else if (row == 7 && (col == 2 || col == 5)) {
-            return new Bishop(Color.BLACK, node);
+            piece = new Bishop(Color.BLACK, node);
         } else if (row == 7 && col == 3) {
-            return new Queen(Color.BLACK, node);
+            piece = new Queen(Color.BLACK, node);
         } else if (row == 7 && col == 4) {
-            return new King(Color.BLACK, node);
+            piece = new King(Color.BLACK, node);
         } else if (row == 6) {
-            return new Pawn(Color.BLACK, node);
-        } else {
-            return null; // Caso não haja uma peça na posição
+            piece = new Pawn(Color.BLACK, node);
+        }
+
+        if (piece != null) {
+            node.setPiece(piece);
         }
     }
 
@@ -109,12 +111,10 @@ public class ChessGraph implements Graph {
     public void display() {
         for (int row = 0; row < size; row++) {
             for (int col = 0; col < size; col++) {
-                if (getNode(row, col).hasPiece()) {
-                    System.out.print(getNode(row, col).getPiece().get().getClass().getSimpleName().charAt(0));
-                } else {
-                    System.out.print("-");
-                }
-                System.out.print(" ");
+                Optional<ChessPiece> optionalPiece = getNode(row, col).getPiece();
+
+                String pieceSymbol = optionalPiece.map(piece -> piece.getClass().getSimpleName()).orElse("-");
+                System.out.print(pieceSymbol + " ");
             }
             System.out.println();
         }
