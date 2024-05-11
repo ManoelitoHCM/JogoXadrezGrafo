@@ -1,6 +1,5 @@
 package chesspiece;
 
-import board.ChessGraph;
 import board.ChessNode;
 
 import java.util.List;
