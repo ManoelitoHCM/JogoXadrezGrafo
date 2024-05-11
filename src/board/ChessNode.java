@@ -1,5 +1,7 @@
 package board;
 
+import java.util.ArrayList;
+import java.util.List;
 import java.util.Optional;
 
 import chesspiece.ChessPiece;
@@ -9,14 +11,17 @@ public class ChessNode {
     private final int row;
     private final int col;
     private Optional<ChessPiece> piece;
+    private List<ChessNode> neighbors;
     private final Color color;
 
     public ChessNode(int row, int col) {
         this.row = row;
         this.col = col;
         this.piece = Optional.empty();
+        this.neighbors = new ArrayList<>();
         // regra para gerar as cores do tabuleiro
         this.color = (row + col) % 2 == 0 ? Color.WHITE : Color.BLACK;
+
     }
 
     public int getRow() {
@@ -45,6 +50,14 @@ public class ChessNode {
 
     public Color getColor() {
         return color;
+    }
+
+    public List<ChessNode> getNeighbors() {
+        return neighbors;
+    }
+
+    public void addNeighbor(ChessNode neighborNode) {
+        neighbors.add(neighborNode);
     }
 
     @Override
