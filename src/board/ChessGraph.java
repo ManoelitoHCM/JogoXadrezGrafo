@@ -18,6 +18,7 @@ public class ChessGraph implements Graph {
         this.nodes = new HashMap<>();
         initializeNodes();
         fillNodes();
+        createEdges();
     }
 
     public static ChessGraph getGraphInstance() {
@@ -107,6 +108,30 @@ public class ChessGraph implements Graph {
         }
     }
 
+    public void createEdges() {
+        for (int row = 0; row < size; row ++) {
+            for (int col = 0; col < size; col++) {
+                ChessNode currentNode = getNode(row, col);
+
+                for (int dr = -1; dr <= 1; dr++) {
+                    for (int dc = -1; dc <= 1; dc++) {
+                        if (dr == 0 && dc == 0) continue;
+
+                        int newRow = row + dr;
+                        int newCol = col + dr;
+
+                        if (newRow > 0 && newCol > 0 && newRow < size && newCol < size) {
+                            if (isValidPosition(getNode(newRow, newCol))) {
+                                ChessNode neighborNode = getNode(newRow, newCol);
+                                currentNode.addNeighbor(neighborNode);
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+
     @Override
     public void display() {
         for (int row = 0; row < size; row++) {
@@ -127,6 +152,10 @@ public class ChessGraph implements Graph {
         return row >= 0 && row < size && col >= 0 && col < size;
     }
 
+    public boolean isPositionAvailable(ChessNode node) {
+        return !node.hasPiece();
+    }
+
     @Override
     public void addNode(ChessNode node) {
         String key = generateKey(node.getRow(), node.getCol());
@@ -139,8 +168,7 @@ public class ChessGraph implements Graph {
         return nodes.getOrDefault(key, null);
     }
 
-    @Override
-    public String generateKey(int row, int col) {
+    private String generateKey(int row, int col) {
         return row + "_" + col;
     }
 
