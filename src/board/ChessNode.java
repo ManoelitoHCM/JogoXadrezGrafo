@@ -9,7 +9,7 @@ public class ChessNode {
     private final int row;
     private final int col;
     private Optional<ChessPiece> piece;
-    private Color color;
+    private final Color color;
 
     public ChessNode(int row, int col) {
         this.row = row;
