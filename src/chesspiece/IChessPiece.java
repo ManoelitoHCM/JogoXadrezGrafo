@@ -3,6 +3,8 @@ package chesspiece;
 import board.ChessGraph;
 import board.ChessNode;
 
+import java.util.List;
+
 public interface IChessPiece {
     Color getColor();
 
@@ -12,9 +14,9 @@ public interface IChessPiece {
 
     void setCurrentNode(ChessNode currentNode);
 
-    ChessNode[][] getPossibleMoves(ChessNode[][] board);
+    List<ChessNode> getPossibleMoves();
 
-    boolean isValidMove(ChessNode newNode, ChessGraph board);
+    boolean isValidMove(ChessNode newNode);
 
     void move(ChessNode newNode);
 

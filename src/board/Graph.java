@@ -1,6 +1,6 @@
 package board;
 
-import chesspiece.*;
+import java.util.Collection;
 
 public interface Graph {
 
@@ -8,13 +8,17 @@ public interface Graph {
 
     void fillNodes();
 
-    ChessPiece createPiece(ChessNode node);
+    void display();
 
     void addNode(ChessNode node);
 
     ChessNode getNode(int row, int col);
 
+    Collection<ChessNode> getNodes();
+
     String generateKey(int row, int col);
 
     boolean isValidPosition(ChessNode newNode);
+
+    int getSize();
 }
