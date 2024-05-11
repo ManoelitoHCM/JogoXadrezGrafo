@@ -2,6 +2,8 @@ package chesspiece;
 
 import board.ChessNode;
 
+import java.util.List;
+
 public class Queen extends ChessPiece {
 
     public Queen(Color color, ChessNode currentNode) {
@@ -9,7 +11,7 @@ public class Queen extends ChessPiece {
     }
 
     @Override
-    public ChessNode[][] getPossibleMoves(ChessNode[][] board) {
-        return new ChessNode[0][];
+    public List<ChessNode> getPossibleMoves() {
+        return List.of();
     }
 }

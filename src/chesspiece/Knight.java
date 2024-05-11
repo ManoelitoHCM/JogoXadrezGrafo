@@ -12,7 +12,7 @@ public class Knight extends ChessPiece {
     }
 
     @Override
-    public List<ChessNode> getPossibleMoves(ChessNode[][] board) {
+    public List<ChessNode> getPossibleMoves() {
 
         List<ChessNode> possibleMoves = new ArrayList<>();
         ChessNode currentPosition = getCurrentNode();

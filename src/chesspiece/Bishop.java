@@ -2,6 +2,8 @@ package chesspiece;
 
 import board.ChessNode;
 
+import java.util.List;
+
 public class Bishop extends ChessPiece {
 
     public Bishop(Color color, ChessNode currentNode) {
@@ -9,7 +11,9 @@ public class Bishop extends ChessPiece {
     }
 
     @Override
-    public ChessNode[][] getPossibleMoves(ChessNode[][] board) {
-        return new ChessNode[0][];
+    public List<ChessNode> getPossibleMoves() {
+        return List.of();
     }
+
+
 }
