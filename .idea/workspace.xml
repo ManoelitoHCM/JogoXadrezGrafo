@@ -4,14 +4,8 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="746eebc3-2ec9-40e6-881f-096e6e66308e" name="Changes" comment="aplicando singleton na matriz de adjacências para ter sempre apenas uma instância dela e do tabuleiro.">
+    <list default="true" id="746eebc3-2ec9-40e6-881f-096e6e66308e" name="Changes" comment="exclusão import desnecessario">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/board/AdjacencyMatrix.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/board/AdjacencyMatrix.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/board/Graph.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/board/Graph.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/chesspiece/Pawn.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/chesspiece/Pawn.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/search/BreadthFirstSearch.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/search/BreadthFirstSearch.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/search/DepthFirstSearch.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/search/DepthFirstSearch.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/search/GraphSearch.java" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -29,18 +23,18 @@
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
-  <component name="GitHubPullRequestSearchHistory"><![CDATA[{
-  "lastFilter": {
-    "state": "OPEN",
-    "assignee": "ManoelitoHCM"
+  <component name="GitHubPullRequestSearchHistory">{
+  &quot;lastFilter&quot;: {
+    &quot;state&quot;: &quot;OPEN&quot;,
+    &quot;assignee&quot;: &quot;ManoelitoHCM&quot;
   }
-}]]></component>
-  <component name="GithubPullRequestsUISettings"><![CDATA[{
-  "selectedUrlAndAccountId": {
-    "url": "https://github.com/ManoelitoHCM/JogoXadrezGrafo.git",
-    "accountId": "13bd3a88-10fd-4ed2-841e-5d5ea28eb4b4"
+}</component>
+  <component name="GithubPullRequestsUISettings">{
+  &quot;selectedUrlAndAccountId&quot;: {
+    &quot;url&quot;: &quot;https://github.com/ManoelitoHCM/JogoXadrezGrafo.git&quot;,
+    &quot;accountId&quot;: &quot;13bd3a88-10fd-4ed2-841e-5d5ea28eb4b4&quot;
   }
-}]]></component>
+}</component>
   <component name="ProjectColorInfo">{
   &quot;associatedIndex&quot;: 0
 }</component>
@@ -116,7 +110,39 @@
       <option name="project" value="LOCAL" />
       <updated>1715363427505</updated>
     </task>
-    <option name="localTasksCounter" value="7" />
+    <task id="LOCAL-00007" summary="Inicio da implementação de movimentação do peão">
+      <option name="closed" value="true" />
+      <created>1715365483437</created>
+      <option name="number" value="00007" />
+      <option name="presentableId" value="LOCAL-00007" />
+      <option name="project" value="LOCAL" />
+      <updated>1715365483437</updated>
+    </task>
+    <task id="LOCAL-00008" summary="Futura adequação para xadrez">
+      <option name="closed" value="true" />
+      <created>1715365509495</created>
+      <option name="number" value="00008" />
+      <option name="presentableId" value="LOCAL-00008" />
+      <option name="project" value="LOCAL" />
+      <updated>1715365509495</updated>
+    </task>
+    <task id="LOCAL-00009" summary="correção erro ortografico">
+      <option name="closed" value="true" />
+      <created>1715365525353</created>
+      <option name="number" value="00009" />
+      <option name="presentableId" value="LOCAL-00009" />
+      <option name="project" value="LOCAL" />
+      <updated>1715365525353</updated>
+    </task>
+    <task id="LOCAL-00010" summary="exclusão import desnecessario">
+      <option name="closed" value="true" />
+      <created>1715365537758</created>
+      <option name="number" value="00010" />
+      <option name="presentableId" value="LOCAL-00010" />
+      <option name="project" value="LOCAL" />
+      <updated>1715365537758</updated>
+    </task>
+    <option name="localTasksCounter" value="11" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -135,7 +161,11 @@
     <MESSAGE value="Limpeza da classe AdjacencyMatrix e ChessGraph para melhor alinhar uma à outra, enxugando métodos desnecessarios" />
     <MESSAGE value="Ajuste nos métodos de adição, remoção e recuperação de peça" />
     <MESSAGE value="aplicando singleton na matriz de adjacências para ter sempre apenas uma instância dela e do tabuleiro." />
-    <option name="LAST_COMMIT_MESSAGE" value="aplicando singleton na matriz de adjacências para ter sempre apenas uma instância dela e do tabuleiro." />
+    <MESSAGE value="Inicio da implementação de movimentação do peão" />
+    <MESSAGE value="Futura adequação para xadrez" />
+    <MESSAGE value="correção erro ortografico" />
+    <MESSAGE value="exclusão import desnecessario" />
+    <option name="LAST_COMMIT_MESSAGE" value="exclusão import desnecessario" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
