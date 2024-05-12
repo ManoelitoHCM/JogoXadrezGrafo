@@ -12,7 +12,7 @@ public interface IChessPiece {
 
     ChessNode getCurrentNode();
 
-    List<ChessNode> filterValidMoves();
+    List<ChessNode> filterValidMoves(ChessNode currentNode);
 
     void move(ChessNode newNode);
 

@@ -11,7 +11,7 @@ public class Rook extends ChessPiece {
     }
 
     @Override
-    protected int[][] listPossibleMoves() {
+    public int[][] getOffsets() {
         return null;
     }
 
