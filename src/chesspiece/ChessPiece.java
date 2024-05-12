@@ -1,12 +1,12 @@
 package chesspiece;
 
 import board.ChessNode;
+import search.BreadthFirstSearch;
+import search.DepthFirstSearch;
 
 import java.util.List;
 
-import static board.ChessGraph.getGraphInstance;
-
-public abstract class ChessPiece implements IChessPiece{
+public abstract class ChessPiece implements IChessPiece {
 
     private Color color;
     private ChessNode currentNode;
@@ -31,18 +31,30 @@ public abstract class ChessPiece implements IChessPiece{
         return currentNode;
     }
 
-    @Override
-    public abstract List<ChessNode> getPossibleMoves();
+    public boolean isOpponentPiece(ChessNode newNode) {
+        ChessPiece piece = newNode.getPiece();
+        return piece != null && piece.getColor() != this.getColor();
+    }
+
+    public abstract int[][] getOffsets();
 
     @Override
-    public boolean isValidMove(ChessNode newNode){
-        return getGraphInstance().isValidPosition(newNode);
+    public List<ChessNode> filterValidMoves(ChessNode currentNode) {
+        return BreadthFirstSearch.findPossibleMoves(currentNode);
+    }
+
+    private boolean isValidMove(ChessNode newNode) {
+        return filterValidMoves(currentNode).contains(newNode);
     }
 
     @Override
-    public void move(ChessNode newNode){
-        this.currentNode.removePiece();
-        this.currentNode = newNode;
-        newNode.setPiece(this);
+    public void move(ChessNode newNode) {
+        if (isValidMove(newNode)) {
+            this.currentNode.removePiece();
+            this.currentNode = newNode;
+            newNode.setPiece(this);
+        } else {
+            System.out.println("Jogada inválida.");
+        }
     }
 }
