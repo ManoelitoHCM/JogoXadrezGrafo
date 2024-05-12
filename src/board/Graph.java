@@ -1,7 +1,5 @@
 package board;
 
-import java.util.Collection;
-
 public interface Graph {
 
     void initializeNodes();
@@ -14,5 +12,4 @@ public interface Graph {
 
     ChessNode getNode(int row, int col);
 
-    boolean isValidPosition(ChessNode newNode);
 }
