@@ -1,25 +1,21 @@
 package search;
 
 import board.ChessNode;
-import board.ChessGraph;
 import chesspiece.ChessPiece;
 
 import java.util.*;
 
-import static board.ChessGraph.getGraphInstance;
-
 public class BreadthFirstSearch {
 
     public static List<ChessNode> findPossibleMoves(ChessNode startNode) {
-        ChessGraph board = getGraphInstance();
 
         List<ChessNode> possibleMoves = new ArrayList<>();
         Set<ChessNode> visitedNodes = new HashSet<>();
         Queue<ChessNode> queue = new LinkedList<>();
 
         if (startNode.hasPiece()) {
-            Optional<ChessPiece> piece = startNode.getPiece();
-            int[][] offsets = piece.get().getOffsets();
+            ChessPiece piece = startNode.getPiece();
+            int[][] offsets = piece.getOffsets();
 
             visitedNodes.add(startNode);
             queue.add(startNode);
@@ -31,17 +27,17 @@ public class BreadthFirstSearch {
                     if (!visitedNodes.contains(neighbor)) {
                         visitedNodes.add(neighbor);
 
-                        if (neighbor.isValidMove(piece)) {
+                        if (currentNode.isValidMove()) {
                             for (int[] offset : offsets) {
-                                int newRow = currentNode.getRow() + offset[0];
-                                int newCol = currentNode.getCol() + offset[1];
+                                int newRow = startNode.getRow() + offset[0];
+                                int newCol = startNode.getCol() + offset[1];
 
-                                if (neighbor.getRow() == newRow && neighbor.getCol() == newCol) {
-                                    possibleMoves.add(neighbor);
-                                    queue.add(neighbor);
+                                if (currentNode.getRow() == newRow && currentNode.getCol() == newCol) {
+                                    possibleMoves.add(currentNode);
                                 }
                             }
                         }
+                        queue.add(neighbor);
                     }
                 }
             }
