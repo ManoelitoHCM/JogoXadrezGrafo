@@ -8,10 +8,9 @@ import java.util.*;
 
 import static board.ChessGraph.getGraphInstance;
 
-public class DepthFirstSearch implements ISearch {
+public class DepthFirstSearch {
 
-    @Override
-    public List<ChessNode> findPossibleMoves(ChessNode startNode) {
+    public static List<ChessNode> findPossibleMoves(ChessNode startNode) {
         ChessGraph board = getGraphInstance();
 
         List<ChessNode> possibleMoves = new ArrayList<>();
