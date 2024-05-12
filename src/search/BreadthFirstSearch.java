@@ -2,45 +2,53 @@ package search;
 
 import board.ChessNode;
 import board.ChessGraph;
-import java.util.LinkedList;
-import java.util.Queue;
+import chesspiece.ChessPiece;
 
-public class BreadthFirstSearch {
-/*
+import java.util.*;
 
-    public static Queue<ChessNode> findPossibleMoves(ChessNode startNode, ChessGraph board) {
-        Queue<ChessNode> possibleMoves = new LinkedList<>();
-        // Implemente o algoritmo BFS aqui
-        return possibleMoves;
-    }
+import static board.ChessGraph.getGraphInstance;
+
+public class BreadthFirstSearch implements ISearch {
 
     @Override
-    public int search(String value, int sourceNode, Graph graph) {
-        AdjacencyMatrix adjacencyMatrix = (AdjacencyMatrix) graph;
-        Queue<Integer> queue = new LinkedList<>();
-        boolean[] visitedNodes = new boolean[adjacencyMatrix.size()];
+    public List<ChessNode> findPossibleMoves(ChessNode startNode) {
+        ChessGraph board = getGraphInstance();
 
-        if (adjacencyMatrix.getLabel(sourceNode).equals(value)) {
-            return sourceNode;
-        }
+        List<ChessNode> possibleMoves = new ArrayList<>();
+        Set<ChessNode> visitedNodes = new HashSet<>();
+        Queue<ChessNode> queue = new LinkedList<>();
 
-        visitedNodes[sourceNode] = true;
-        queue.add(sourceNode);
+        if (startNode.hasPiece()) {
+            Optional<ChessPiece> piece = startNode.getPiece();
+            int[][] offsets = piece.get().getOffsets();
 
-        while (!queue.isEmpty()) {
-            int currentNode = queue.poll();
-            System.out.println(currentNode + " - value: " + adjacencyMatrix.getLabel(currentNode));
+            visitedNodes.add(startNode);
+            queue.add(startNode);
 
-            for (int i = 0; i < adjacencyMatrix.size(); i++) {
-                if (adjacencyMatrix.hasEdge(currentNode, i) && !visitedNodes[i]) {
-                    if (adjacencyMatrix.getLabel(i).equals(value)) {
-                        return i;
+            while (!queue.isEmpty()) {
+                ChessNode currentNode = queue.poll();
+
+                for (ChessNode neighbor : currentNode.getNeighbors()) {
+                    if (!visitedNodes.contains(neighbor)) {
+                        visitedNodes.add(neighbor);
+
+                        if (neighbor.isValidMove(piece)) {
+                            for (int[] offset : offsets) {
+                                int newRow = currentNode.getRow() + offset[0];
+                                int newCol = currentNode.getCol() + offset[1];
+
+                                if (neighbor.getRow() == newRow && neighbor.getCol() == newCol) {
+                                    possibleMoves.add(neighbor);
+                                    queue.add(neighbor);
+                                }
+                            }
+                        }
                     }
-                    visitedNodes[i] = true;
-                    queue.add(i);
                 }
             }
+            return possibleMoves;
+        } else {
+            throw new NullPointerException("Não há peça nessa posição.");
         }
-        return -1;
-    }*/
+    }
 }

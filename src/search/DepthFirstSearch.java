@@ -1,31 +1,55 @@
 package search;
 
-public class DepthFirstSearch {
-/*
+import board.ChessNode;
+import board.ChessGraph;
+import chesspiece.ChessPiece;
+
+import java.util.*;
+
+import static board.ChessGraph.getGraphInstance;
+
+public class DepthFirstSearch implements ISearch {
+
     @Override
-    public int search(String value, int sourceNode, Graph graph) {
-        AdjacencyMatrix adjacencyMatrix = (AdjacencyMatrix) graph;
-        Stack<Integer> stack = new Stack<>();
-        boolean[] visitedNodes = new boolean[adjacencyMatrix.size()];
-        stack.push(sourceNode);
+    public List<ChessNode> findPossibleMoves(ChessNode startNode) {
+        ChessGraph board = getGraphInstance();
 
-        while (!stack.isEmpty()) {
-            int currentNode = stack.pop();
-            visitedNodes[currentNode] = true;
-            System.out.println(currentNode + " - value: " + adjacencyMatrix.getLabel(currentNode));
+        List<ChessNode> possibleMoves = new ArrayList<>();
+        Set<ChessNode> visitedNodes = new HashSet<>();
+        Deque<ChessNode> stack = new ArrayDeque<>();
 
-            if (adjacencyMatrix.getLabel(currentNode).equals(value)) {
-                return currentNode;
-            }
+        if (startNode.hasPiece()) {
+            Optional<ChessPiece> piece = startNode.getPiece();
+            int[][] offsets = piece.get().getOffsets();
 
-            for (int i = 0; i < adjacencyMatrix.size(); i++) {
-                if (adjacencyMatrix.hasEdge(currentNode, i) && !visitedNodes[i]) {
-                    stack.push(i);
+            visitedNodes.add(startNode);
+            stack.push(startNode);
+
+            while (!stack.isEmpty()) {
+                ChessNode currentNode = stack.pop();
+
+                for (ChessNode neighbor : currentNode.getNeighbors()) {
+                    if (!visitedNodes.contains(neighbor)) {
+                        visitedNodes.add(neighbor);
+
+                        if (neighbor.isValidMove(piece)) {
+                            for (int[] offset : offsets) {
+                                int newRow = currentNode.getRow() + offset[0];
+                                int newCol = currentNode.getCol() + offset[1];
+
+                                if (neighbor.getRow() == newRow && neighbor.getCol() == newCol) {
+                                    possibleMoves.add(neighbor);
+                                    stack.push(neighbor);
+                                }
+                            }
+                        }
+                    }
                 }
             }
+            return possibleMoves;
+        } else {
+            throw new NullPointerException("Não há peça nessa posição.");
         }
-        return -1;
     }
 
- */
 }
