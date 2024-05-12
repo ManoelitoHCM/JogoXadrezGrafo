@@ -13,6 +13,7 @@ public class ChessNode {
     private Optional<ChessPiece> piece;
     private List<ChessNode> neighbors;
     private final Color color;
+    private final ChessGraph board = ChessGraph.getGraphInstance();
 
     public ChessNode(int row, int col) {
         this.row = row;
@@ -32,6 +33,10 @@ public class ChessNode {
         return col;
     }
 
+    public boolean isInBounds() {
+        return this.row >= 0 && this.row < board.getSize() && this.col >= 0 && this.col < board.getSize();
+    }
+
     public Optional<ChessPiece> getPiece() {
         return piece;
     }
@@ -46,6 +51,10 @@ public class ChessNode {
 
     public void removePiece() {
         this.piece = Optional.empty();
+    }
+
+    public boolean isValidMove(Optional<ChessPiece> piece) {
+        return !hasPiece() || getPiece().get().isOpponentPiece(this);
     }
 
     public Color getColor() {

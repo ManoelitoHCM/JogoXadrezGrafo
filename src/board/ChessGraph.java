@@ -2,7 +2,6 @@ package board;
 
 import chesspiece.*;
 
-import java.util.Collection;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Optional;
@@ -12,6 +11,7 @@ public class ChessGraph implements Graph {
     private final int size;
     private final Map<String, ChessNode> nodes;
     private static ChessGraph boardInstance;
+    private ChessNode node;
 
     private ChessGraph() {
         this.size = 8;
@@ -121,10 +121,8 @@ public class ChessGraph implements Graph {
                         int newCol = col + dr;
 
                         if (newRow > 0 && newCol > 0 && newRow < size && newCol < size) {
-                            if (isValidPosition(getNode(newRow, newCol))) {
-                                ChessNode neighborNode = getNode(newRow, newCol);
-                                currentNode.addNeighbor(neighborNode);
-                            }
+                            ChessNode neighborNode = getNode(newRow, newCol);
+                            currentNode.addNeighbor(neighborNode);
                         }
                     }
                 }
@@ -146,30 +144,24 @@ public class ChessGraph implements Graph {
     }
 
     @Override
-    public boolean isValidPosition(ChessNode node) {
+    public void addNode(ChessNode node) {
         int row = node.getRow();
         int col = node.getCol();
-        return row >= 0 && row < size && col >= 0 && col < size;
-    }
 
-    public boolean isPositionAvailable(ChessNode node) {
-        return !node.hasPiece();
-    }
-
-    @Override
-    public void addNode(ChessNode node) {
-        String key = generateKey(node.getRow(), node.getCol());
-        nodes.put(key, node);
+        nodes.put(getIndex(row, col), node);
     }
 
     @Override
     public ChessNode getNode(int row, int col) {
-        String key = generateKey(row, col);
-        return nodes.getOrDefault(key, null);
+        String index = getIndex(row, col);
+        return nodes.getOrDefault(index, null);
     }
 
-    private String generateKey(int row, int col) {
+    private String getIndex(int row, int col) {
         return row + "_" + col;
     }
 
+    public int getSize() {
+        return size;
+    }
 }
