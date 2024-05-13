@@ -4,12 +4,11 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="746eebc3-2ec9-40e6-881f-096e6e66308e" name="Changes" comment="teste main">
+    <list default="true" id="746eebc3-2ec9-40e6-881f-096e6e66308e" name="Changes" comment="adição de offset das peças">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/chesspiece/ChessPiece.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/chesspiece/ChessPiece.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/game/Game.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/game/Game.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/search/BreadthFirstSearch.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/search/BreadthFirstSearch.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/search/DepthFirstSearch.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/search/DepthFirstSearch.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/chesspiece/King.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/chesspiece/King.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/chesspiece/Pawn.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/chesspiece/Pawn.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/chesspiece/Queen.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/chesspiece/Queen.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -71,30 +70,6 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1715268101893</updated>
-    </task>
-    <task id="LOCAL-00001" summary="Criação da classe ChessGraph e ChessNode para melhor representar um grafo no contexto do xadrez; ajustes nas demais classes para adequação">
-      <option name="closed" value="true" />
-      <created>1715358148994</created>
-      <option name="number" value="00001" />
-      <option name="presentableId" value="LOCAL-00001" />
-      <option name="project" value="LOCAL" />
-      <updated>1715358148994</updated>
-    </task>
-    <task id="LOCAL-00002" summary="Criação da classe ChessGraph e ChessNode para melhor representar um grafo no contexto do xadrez; ajustes nas demais classes para adequação">
-      <option name="closed" value="true" />
-      <created>1715358230442</created>
-      <option name="number" value="00002" />
-      <option name="presentableId" value="LOCAL-00002" />
-      <option name="project" value="LOCAL" />
-      <updated>1715358230442</updated>
-    </task>
-    <task id="LOCAL-00003" summary="Limpeza da classe AdjacencyMatrix e ChessGraph para melhor alinhar uma à outra, enxugando métodos desnecessarios">
-      <option name="closed" value="true" />
-      <created>1715359623823</created>
-      <option name="number" value="00003" />
-      <option name="presentableId" value="LOCAL-00003" />
-      <option name="project" value="LOCAL" />
-      <updated>1715359623823</updated>
     </task>
     <task id="LOCAL-00004" summary="Limpeza da classe AdjacencyMatrix e ChessGraph para melhor alinhar uma à outra, enxugando métodos desnecessarios">
       <option name="closed" value="true" />
@@ -464,7 +439,31 @@
       <option name="project" value="LOCAL" />
       <updated>1715554865135</updated>
     </task>
-    <option name="localTasksCounter" value="50" />
+    <task id="LOCAL-00050" summary="ajustes nos métodos de busca">
+      <option name="closed" value="true" />
+      <created>1715559767142</created>
+      <option name="number" value="00050" />
+      <option name="presentableId" value="LOCAL-00050" />
+      <option name="project" value="LOCAL" />
+      <updated>1715559767142</updated>
+    </task>
+    <task id="LOCAL-00051" summary=".">
+      <option name="closed" value="true" />
+      <created>1715559779817</created>
+      <option name="number" value="00051" />
+      <option name="presentableId" value="LOCAL-00051" />
+      <option name="project" value="LOCAL" />
+      <updated>1715559779817</updated>
+    </task>
+    <task id="LOCAL-00052" summary="adição de offset das peças">
+      <option name="closed" value="true" />
+      <created>1715560573644</created>
+      <option name="number" value="00052" />
+      <option name="presentableId" value="LOCAL-00052" />
+      <option name="project" value="LOCAL" />
+      <updated>1715560573644</updated>
+    </task>
+    <option name="localTasksCounter" value="53" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -479,14 +478,11 @@
     </option>
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="ajuste nos métodos para criar e setar posição das peças do jogo" />
-    <MESSAGE value="ajuste no toString" />
     <MESSAGE value="remoção de métodos getNodes e getSize por não terem utilidade" />
     <MESSAGE value="mudança de color para final" />
     <MESSAGE value="remoção do método setCurrentNode, porque não deve haver nenhuma mudança nos nós uma vez o tabuleiro criado" />
     <MESSAGE value="remoção de métodos não utilizados" />
     <MESSAGE value="remoção de import não utilizado" />
-    <MESSAGE value="." />
     <MESSAGE value="correção método" />
     <MESSAGE value="implementação do método createEdges" />
     <MESSAGE value="atribuição da variável neighbor" />
@@ -504,6 +500,9 @@
     <MESSAGE value="remoção da interface" />
     <MESSAGE value="ajuste do retorno da função offset" />
     <MESSAGE value="teste main" />
-    <option name="LAST_COMMIT_MESSAGE" value="teste main" />
+    <MESSAGE value="ajustes nos métodos de busca" />
+    <MESSAGE value="." />
+    <MESSAGE value="adição de offset das peças" />
+    <option name="LAST_COMMIT_MESSAGE" value="adição de offset das peças" />
   </component>
 </project>
