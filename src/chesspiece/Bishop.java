@@ -2,8 +2,6 @@ package chesspiece;
 
 import board.ChessNode;
 
-import java.util.List;
-
 public class Bishop extends ChessPiece {
 
     public Bishop(Color color, ChessNode currentNode) {
@@ -12,7 +10,12 @@ public class Bishop extends ChessPiece {
 
     @Override
     public int[][] getOffsets() {
-        return null;
+        return new int[][]{
+            {1, 1},     // diagonal superior direita
+            {1, -1},    // diagonal superior esquerda
+            {-1, 1},    // diagonal inferior direita
+            {-1, -1}    // diagonal inferior esquerda
+        };
     }
 
 }

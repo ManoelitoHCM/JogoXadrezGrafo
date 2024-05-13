@@ -11,10 +11,10 @@ public class Knight extends ChessPiece {
     @Override
     public int[][] getOffsets() {
         return new int[][]{
-                {-2, -1}, {-2, 1}, // movimento em L para frente
-                {-1, -2}, {-1, 2}, // movimento em L para os lados
+                {-2, -1}, {-2, 1},  // movimento em L para frente
+                {-1, -2}, {-1, 2},  // movimento em L para os lados
                 {1, -2}, {1, 2},
-                {2, -1}, {2, 1}    // movimento em L para trás
+                {2, -1}, {2, 1}     // movimento em L para trás
         };
     }
 }
