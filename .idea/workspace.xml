@@ -6,9 +6,11 @@
   <component name="ChangeListManager">
     <list default="true" id="746eebc3-2ec9-40e6-881f-096e6e66308e" name="Changes" comment="adição de offset das peças">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/chesspiece/King.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/chesspiece/King.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/board/ChessNode.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/board/ChessNode.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/chesspiece/ChessPiece.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/chesspiece/ChessPiece.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/chesspiece/Pawn.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/chesspiece/Pawn.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/chesspiece/Queen.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/chesspiece/Queen.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/game/Game.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/game/Game.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/search/BreadthFirstSearch.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/search/BreadthFirstSearch.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -70,22 +72,6 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1715268101893</updated>
-    </task>
-    <task id="LOCAL-00004" summary="Limpeza da classe AdjacencyMatrix e ChessGraph para melhor alinhar uma à outra, enxugando métodos desnecessarios">
-      <option name="closed" value="true" />
-      <created>1715359632337</created>
-      <option name="number" value="00004" />
-      <option name="presentableId" value="LOCAL-00004" />
-      <option name="project" value="LOCAL" />
-      <updated>1715359632337</updated>
-    </task>
-    <task id="LOCAL-00005" summary="Ajuste nos métodos de adição, remoção e recuperação de peça">
-      <option name="closed" value="true" />
-      <created>1715360417762</created>
-      <option name="number" value="00005" />
-      <option name="presentableId" value="LOCAL-00005" />
-      <option name="project" value="LOCAL" />
-      <updated>1715360417762</updated>
     </task>
     <task id="LOCAL-00006" summary="aplicando singleton na matriz de adjacências para ter sempre apenas uma instância dela e do tabuleiro.">
       <option name="closed" value="true" />
@@ -463,7 +449,23 @@
       <option name="project" value="LOCAL" />
       <updated>1715560573644</updated>
     </task>
-    <option name="localTasksCounter" value="53" />
+    <task id="LOCAL-00053" summary="adição de offset das peças">
+      <option name="closed" value="true" />
+      <created>1715560798927</created>
+      <option name="number" value="00053" />
+      <option name="presentableId" value="LOCAL-00053" />
+      <option name="project" value="LOCAL" />
+      <updated>1715560798927</updated>
+    </task>
+    <task id="LOCAL-00054" summary="adição de offset das peças">
+      <option name="closed" value="true" />
+      <created>1715560801881</created>
+      <option name="number" value="00054" />
+      <option name="presentableId" value="LOCAL-00054" />
+      <option name="project" value="LOCAL" />
+      <updated>1715560801881</updated>
+    </task>
+    <option name="localTasksCounter" value="55" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
