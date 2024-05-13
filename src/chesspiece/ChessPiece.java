@@ -32,8 +32,7 @@ public abstract class ChessPiece implements IChessPiece {
     }
 
     public boolean isOpponentPiece(ChessNode newNode) {
-        ChessPiece piece = newNode.getPiece();
-        return piece != null && piece.getColor() != this.getColor();
+        return newNode.getPiece().getColor() != this.getColor();
     }
 
     public abstract int[][] getOffsets();
