@@ -4,10 +4,9 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="746eebc3-2ec9-40e6-881f-096e6e66308e" name="Changes" comment="correção na lógica do 'isOpponent'">
+    <list default="true" id="746eebc3-2ec9-40e6-881f-096e6e66308e" name="Changes" comment="display">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/board/ChessGraph.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/board/ChessGraph.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/game/Game.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/game/Game.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -69,14 +68,6 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1715268101893</updated>
-    </task>
-    <task id="LOCAL-00011" summary="remoção do singleton - como a matriz de adjacências representará os movimentos possíveis de cada peça criando arestas ligando os pontos de movimento possíveis à posição da peça, não faz sentido ter um singleton e o removi">
-      <option name="closed" value="true" />
-      <created>1715431933887</created>
-      <option name="number" value="00011" />
-      <option name="presentableId" value="LOCAL-00011" />
-      <option name="project" value="LOCAL" />
-      <updated>1715431933887</updated>
     </task>
     <task id="LOCAL-00012" summary=".">
       <option name="closed" value="true" />
@@ -462,7 +453,15 @@
       <option name="project" value="LOCAL" />
       <updated>1715566063225</updated>
     </task>
-    <option name="localTasksCounter" value="60" />
+    <task id="LOCAL-00060" summary="display">
+      <option name="closed" value="true" />
+      <created>1715567682997</created>
+      <option name="number" value="00060" />
+      <option name="presentableId" value="LOCAL-00060" />
+      <option name="project" value="LOCAL" />
+      <updated>1715567682997</updated>
+    </task>
+    <option name="localTasksCounter" value="61" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -477,7 +476,6 @@
     </option>
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="correção método" />
     <MESSAGE value="implementação do método createEdges" />
     <MESSAGE value="atribuição da variável neighbor" />
     <MESSAGE value="remoção método não utilizado" />
@@ -502,6 +500,7 @@
     <MESSAGE value="ajuste isValidMove" />
     <MESSAGE value="ajuste inicio jogo" />
     <MESSAGE value="correção na lógica do 'isOpponent'" />
-    <option name="LAST_COMMIT_MESSAGE" value="correção na lógica do 'isOpponent'" />
+    <MESSAGE value="display" />
+    <option name="LAST_COMMIT_MESSAGE" value="display" />
   </component>
 </project>

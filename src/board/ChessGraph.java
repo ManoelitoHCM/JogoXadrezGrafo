@@ -95,31 +95,13 @@ public class ChessGraph {
             System.out.print(row + 1 + " | ");
             for (int col = 0; col < size; col++) {
                 ChessPiece piece = getNode(row, col).getPiece();
-                String pieceSymbol = " - ";
+                String pieceSymbol = "-";
 
                 if (piece != null) {
-                    switch (piece.getClass().getSimpleName()) {
-                        case "King":
-                            pieceSymbol = piece.getColor() == Color.WHITE ? "♔" : "♚";
-                            break;
-                        case "Queen":
-                            pieceSymbol = piece.getColor() == Color.WHITE ? "♕" : "♛";
-                            break;
-                        case "Rook":
-                            pieceSymbol = piece.getColor() == Color.WHITE ? "♖" : "♜";
-                            break;
-                        case "Bishop":
-                            pieceSymbol = piece.getColor() == Color.WHITE ? "♗" : "♝";
-                            break;
-                        case "Knight":
-                            pieceSymbol = piece.getColor() == Color.WHITE ? "♘" : "♞";
-                            break;
-                        case "Pawn":
-                            pieceSymbol = piece.getColor() == Color.WHITE ? "♙" : "♟";
-                            break;
-                    }
+                    pieceSymbol = String.valueOf(piece.getClass().getSimpleName().charAt(0)).toUpperCase();
                 }
-                System.out.print(String.format("%2s", pieceSymbol));  // Use %4s for fixed 4 spaces
+
+                System.out.print(String.format("%3s", pieceSymbol));
             }
             System.out.println(" | " + (row + 1));
         }
