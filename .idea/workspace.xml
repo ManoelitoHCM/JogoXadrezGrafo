@@ -4,15 +4,12 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="746eebc3-2ec9-40e6-881f-096e6e66308e" name="Changes" comment="ajuste no toString">
+    <list default="true" id="746eebc3-2ec9-40e6-881f-096e6e66308e" name="Changes" comment="teste main">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/board/ChessGraph.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/board/ChessGraph.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/board/ChessNode.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/board/ChessNode.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/board/Graph.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/board/Graph.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/chesspiece/ChessPiece.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/chesspiece/ChessPiece.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/chesspiece/IChessPiece.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/chesspiece/IChessPiece.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/chesspiece/Rook.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/chesspiece/Rook.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/game/Game.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/game/Game.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/search/BreadthFirstSearch.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/search/BreadthFirstSearch.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/search/DepthFirstSearch.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/search/DepthFirstSearch.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -22,8 +19,8 @@
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
-        <option value="Interface" />
         <option value="Class" />
+        <option value="Interface" />
       </list>
     </option>
   </component>
@@ -259,7 +256,215 @@
       <option name="project" value="LOCAL" />
       <updated>1715440749251</updated>
     </task>
-    <option name="localTasksCounter" value="24" />
+    <task id="LOCAL-00024" summary="remoção de métodos getNodes e getSize por não terem utilidade">
+      <option name="closed" value="true" />
+      <created>1715440949648</created>
+      <option name="number" value="00024" />
+      <option name="presentableId" value="LOCAL-00024" />
+      <option name="project" value="LOCAL" />
+      <updated>1715440949648</updated>
+    </task>
+    <task id="LOCAL-00025" summary="mudança de color para final">
+      <option name="closed" value="true" />
+      <created>1715440959532</created>
+      <option name="number" value="00025" />
+      <option name="presentableId" value="LOCAL-00025" />
+      <option name="project" value="LOCAL" />
+      <updated>1715440959532</updated>
+    </task>
+    <task id="LOCAL-00026" summary="remoção do método setCurrentNode, porque não deve haver nenhuma mudança nos nós uma vez o tabuleiro criado">
+      <option name="closed" value="true" />
+      <created>1715440986513</created>
+      <option name="number" value="00026" />
+      <option name="presentableId" value="LOCAL-00026" />
+      <option name="project" value="LOCAL" />
+      <updated>1715440986513</updated>
+    </task>
+    <task id="LOCAL-00027" summary="remoção de métodos não utilizados">
+      <option name="closed" value="true" />
+      <created>1715440996634</created>
+      <option name="number" value="00027" />
+      <option name="presentableId" value="LOCAL-00027" />
+      <option name="project" value="LOCAL" />
+      <updated>1715440996634</updated>
+    </task>
+    <task id="LOCAL-00028" summary="remoção de import não utilizado">
+      <option name="closed" value="true" />
+      <created>1715441006724</created>
+      <option name="number" value="00028" />
+      <option name="presentableId" value="LOCAL-00028" />
+      <option name="project" value="LOCAL" />
+      <updated>1715441006724</updated>
+    </task>
+    <task id="LOCAL-00029" summary=".">
+      <option name="closed" value="true" />
+      <created>1715441033105</created>
+      <option name="number" value="00029" />
+      <option name="presentableId" value="LOCAL-00029" />
+      <option name="project" value="LOCAL" />
+      <updated>1715441033105</updated>
+    </task>
+    <task id="LOCAL-00030" summary=".">
+      <option name="closed" value="true" />
+      <created>1715441079022</created>
+      <option name="number" value="00030" />
+      <option name="presentableId" value="LOCAL-00030" />
+      <option name="project" value="LOCAL" />
+      <updated>1715441079022</updated>
+    </task>
+    <task id="LOCAL-00031" summary="correção método">
+      <option name="closed" value="true" />
+      <created>1715450978972</created>
+      <option name="number" value="00031" />
+      <option name="presentableId" value="LOCAL-00031" />
+      <option name="project" value="LOCAL" />
+      <updated>1715450978972</updated>
+    </task>
+    <task id="LOCAL-00032" summary="implementação do método createEdges">
+      <option name="closed" value="true" />
+      <created>1715451024233</created>
+      <option name="number" value="00032" />
+      <option name="presentableId" value="LOCAL-00032" />
+      <option name="project" value="LOCAL" />
+      <updated>1715451024233</updated>
+    </task>
+    <task id="LOCAL-00033" summary="atribuição da variável neighbor">
+      <option name="closed" value="true" />
+      <created>1715451049399</created>
+      <option name="number" value="00033" />
+      <option name="presentableId" value="LOCAL-00033" />
+      <option name="project" value="LOCAL" />
+      <updated>1715451049399</updated>
+    </task>
+    <task id="LOCAL-00034" summary="teste main">
+      <option name="closed" value="true" />
+      <created>1715451062253</created>
+      <option name="number" value="00034" />
+      <option name="presentableId" value="LOCAL-00034" />
+      <option name="project" value="LOCAL" />
+      <updated>1715451062253</updated>
+    </task>
+    <task id="LOCAL-00035" summary="remoção método não utilizado">
+      <option name="closed" value="true" />
+      <created>1715451073490</created>
+      <option name="number" value="00035" />
+      <option name="presentableId" value="LOCAL-00035" />
+      <option name="project" value="LOCAL" />
+      <updated>1715451073490</updated>
+    </task>
+    <task id="LOCAL-00036" summary="remoção método não utilizado">
+      <option name="closed" value="true" />
+      <created>1715451079802</created>
+      <option name="number" value="00036" />
+      <option name="presentableId" value="LOCAL-00036" />
+      <option name="project" value="LOCAL" />
+      <updated>1715451079802</updated>
+    </task>
+    <task id="LOCAL-00037" summary="implementação da busca de nós válidos para a jogada">
+      <option name="closed" value="true" />
+      <created>1715525458367</created>
+      <option name="number" value="00037" />
+      <option name="presentableId" value="LOCAL-00037" />
+      <option name="project" value="LOCAL" />
+      <updated>1715525458367</updated>
+    </task>
+    <task id="LOCAL-00038" summary="remoção da matriz - desnecessária">
+      <option name="closed" value="true" />
+      <created>1715525520503</created>
+      <option name="number" value="00038" />
+      <option name="presentableId" value="LOCAL-00038" />
+      <option name="project" value="LOCAL" />
+      <updated>1715525520503</updated>
+    </task>
+    <task id="LOCAL-00039" summary="ajustes em alguns métodos desnecessários na classe do tabuleiro e realocação na classe de nó">
+      <option name="closed" value="true" />
+      <created>1715525657981</created>
+      <option name="number" value="00039" />
+      <option name="presentableId" value="LOCAL-00039" />
+      <option name="project" value="LOCAL" />
+      <updated>1715525657981</updated>
+    </task>
+    <task id="LOCAL-00040" summary="remoção método para alocação na classe de nó">
+      <option name="closed" value="true" />
+      <created>1715525681059</created>
+      <option name="number" value="00040" />
+      <option name="presentableId" value="LOCAL-00040" />
+      <option name="project" value="LOCAL" />
+      <updated>1715525681059</updated>
+    </task>
+    <task id="LOCAL-00041" summary="métodos de busca serão estáticos e remoção de interface">
+      <option name="closed" value="true" />
+      <created>1715525906078</created>
+      <option name="number" value="00041" />
+      <option name="presentableId" value="LOCAL-00041" />
+      <option name="project" value="LOCAL" />
+      <updated>1715525906078</updated>
+    </task>
+    <task id="LOCAL-00042" summary="implementação do método BFS aplicado corretamente ao grafo">
+      <option name="closed" value="true" />
+      <created>1715554635239</created>
+      <option name="number" value="00042" />
+      <option name="presentableId" value="LOCAL-00042" />
+      <option name="project" value="LOCAL" />
+      <updated>1715554635239</updated>
+    </task>
+    <task id="LOCAL-00043" summary="adicionando atributo ao metodo de listar movimentos e corrigindo retorno">
+      <option name="closed" value="true" />
+      <created>1715554688987</created>
+      <option name="number" value="00043" />
+      <option name="presentableId" value="LOCAL-00043" />
+      <option name="project" value="LOCAL" />
+      <updated>1715554688987</updated>
+    </task>
+    <task id="LOCAL-00044" summary="otimização da inicialização do grafo">
+      <option name="closed" value="true" />
+      <created>1715554760616</created>
+      <option name="number" value="00044" />
+      <option name="presentableId" value="LOCAL-00044" />
+      <option name="project" value="LOCAL" />
+      <updated>1715554760616</updated>
+    </task>
+    <task id="LOCAL-00045" summary="remoção do optional">
+      <option name="closed" value="true" />
+      <created>1715554775053</created>
+      <option name="number" value="00045" />
+      <option name="presentableId" value="LOCAL-00045" />
+      <option name="project" value="LOCAL" />
+      <updated>1715554775053</updated>
+    </task>
+    <task id="LOCAL-00046" summary="implementação da verificação se peça é oponente + melhoria da movimentação">
+      <option name="closed" value="true" />
+      <created>1715554823730</created>
+      <option name="number" value="00046" />
+      <option name="presentableId" value="LOCAL-00046" />
+      <option name="project" value="LOCAL" />
+      <updated>1715554823730</updated>
+    </task>
+    <task id="LOCAL-00047" summary="remoção da interface">
+      <option name="closed" value="true" />
+      <created>1715554834239</created>
+      <option name="number" value="00047" />
+      <option name="presentableId" value="LOCAL-00047" />
+      <option name="project" value="LOCAL" />
+      <updated>1715554834239</updated>
+    </task>
+    <task id="LOCAL-00048" summary="ajuste do retorno da função offset">
+      <option name="closed" value="true" />
+      <created>1715554853093</created>
+      <option name="number" value="00048" />
+      <option name="presentableId" value="LOCAL-00048" />
+      <option name="project" value="LOCAL" />
+      <updated>1715554853093</updated>
+    </task>
+    <task id="LOCAL-00049" summary="teste main">
+      <option name="closed" value="true" />
+      <created>1715554865135</created>
+      <option name="number" value="00049" />
+      <option name="presentableId" value="LOCAL-00049" />
+      <option name="project" value="LOCAL" />
+      <updated>1715554865135</updated>
+    </task>
+    <option name="localTasksCounter" value="50" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -274,35 +479,31 @@
     </option>
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="Criação da classe ChessGraph e ChessNode para melhor representar um grafo no contexto do xadrez; ajustes nas demais classes para adequação" />
-    <MESSAGE value="Limpeza da classe AdjacencyMatrix e ChessGraph para melhor alinhar uma à outra, enxugando métodos desnecessarios" />
-    <MESSAGE value="Ajuste nos métodos de adição, remoção e recuperação de peça" />
-    <MESSAGE value="aplicando singleton na matriz de adjacências para ter sempre apenas uma instância dela e do tabuleiro." />
-    <MESSAGE value="Inicio da implementação de movimentação do peão" />
-    <MESSAGE value="Futura adequação para xadrez" />
-    <MESSAGE value="correção erro ortografico" />
-    <MESSAGE value="exclusão import desnecessario" />
-    <MESSAGE value="remoção do singleton - como a matriz de adjacências representará os movimentos possíveis de cada peça criando arestas ligando os pontos de movimento possíveis à posição da peça, não faz sentido ter um singleton e o removi" />
-    <MESSAGE value="." />
-    <MESSAGE value="implementação do método getPossibleMoves" />
-    <MESSAGE value="adição dos métodos getNodes e display" />
-    <MESSAGE value="adição do método hasPiece" />
-    <MESSAGE value="correção de parametro de metodo" />
-    <MESSAGE value="remoção de import desnecessário" />
-    <MESSAGE value="teste main" />
     <MESSAGE value="ajuste nos métodos para criar e setar posição das peças do jogo" />
     <MESSAGE value="ajuste no toString" />
-    <option name="LAST_COMMIT_MESSAGE" value="ajuste no toString" />
-  </component>
-  <component name="XDebuggerManager">
-    <breakpoint-manager>
-      <breakpoints>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/Main.java</url>
-          <line>11</line>
-          <option name="timeStamp" value="1" />
-        </line-breakpoint>
-      </breakpoints>
-    </breakpoint-manager>
+    <MESSAGE value="remoção de métodos getNodes e getSize por não terem utilidade" />
+    <MESSAGE value="mudança de color para final" />
+    <MESSAGE value="remoção do método setCurrentNode, porque não deve haver nenhuma mudança nos nós uma vez o tabuleiro criado" />
+    <MESSAGE value="remoção de métodos não utilizados" />
+    <MESSAGE value="remoção de import não utilizado" />
+    <MESSAGE value="." />
+    <MESSAGE value="correção método" />
+    <MESSAGE value="implementação do método createEdges" />
+    <MESSAGE value="atribuição da variável neighbor" />
+    <MESSAGE value="remoção método não utilizado" />
+    <MESSAGE value="implementação da busca de nós válidos para a jogada" />
+    <MESSAGE value="remoção da matriz - desnecessária" />
+    <MESSAGE value="ajustes em alguns métodos desnecessários na classe do tabuleiro e realocação na classe de nó" />
+    <MESSAGE value="remoção método para alocação na classe de nó" />
+    <MESSAGE value="métodos de busca serão estáticos e remoção de interface" />
+    <MESSAGE value="implementação do método BFS aplicado corretamente ao grafo" />
+    <MESSAGE value="adicionando atributo ao metodo de listar movimentos e corrigindo retorno" />
+    <MESSAGE value="otimização da inicialização do grafo" />
+    <MESSAGE value="remoção do optional" />
+    <MESSAGE value="implementação da verificação se peça é oponente + melhoria da movimentação" />
+    <MESSAGE value="remoção da interface" />
+    <MESSAGE value="ajuste do retorno da função offset" />
+    <MESSAGE value="teste main" />
+    <option name="LAST_COMMIT_MESSAGE" value="teste main" />
   </component>
 </project>
