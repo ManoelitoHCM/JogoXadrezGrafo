@@ -1,25 +1,21 @@
 package search;
 
 import board.ChessNode;
-import board.ChessGraph;
 import chesspiece.ChessPiece;
 
 import java.util.*;
 
-import static board.ChessGraph.getGraphInstance;
-
 public class DepthFirstSearch {
 
     public static List<ChessNode> findPossibleMoves(ChessNode startNode) {
-        ChessGraph board = getGraphInstance();
 
         List<ChessNode> possibleMoves = new ArrayList<>();
         Set<ChessNode> visitedNodes = new HashSet<>();
-        Deque<ChessNode> stack = new ArrayDeque<>();
+        Stack<ChessNode> stack = new Stack<>();
 
         if (startNode.hasPiece()) {
-            Optional<ChessPiece> piece = startNode.getPiece();
-            int[][] offsets = piece.get().getOffsets();
+            ChessPiece piece = startNode.getPiece();
+            int[][] offsets = piece.getOffsets();
 
             visitedNodes.add(startNode);
             stack.push(startNode);
@@ -30,17 +26,18 @@ public class DepthFirstSearch {
                 for (ChessNode neighbor : currentNode.getNeighbors()) {
                     if (!visitedNodes.contains(neighbor)) {
                         visitedNodes.add(neighbor);
+                        stack.push(neighbor);
+                    }
+                }
 
-                        if (neighbor.isValidMove(piece)) {
-                            for (int[] offset : offsets) {
-                                int newRow = currentNode.getRow() + offset[0];
-                                int newCol = currentNode.getCol() + offset[1];
+                if (currentNode.isValidMove()) {
+                    for (int[] offset : offsets) {
+                        int newRow = piece.getCurrentNode().getRow() + offset[0];
+                        int newCol = piece.getCurrentNode().getCol() + offset[1];
 
-                                if (neighbor.getRow() == newRow && neighbor.getCol() == newCol) {
-                                    possibleMoves.add(neighbor);
-                                    stack.push(neighbor);
-                                }
-                            }
+                        if (currentNode.getRow() == newRow && currentNode.getCol() == newCol) {
+                            System.out.println("comparou e adicionou");
+                            possibleMoves.add(currentNode);
                         }
                     }
                 }
