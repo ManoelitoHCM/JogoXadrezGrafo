@@ -88,20 +88,46 @@ public class ChessGraph {
     }
 
     public void display() {
+        System.out.println("    1  2  3  4  5  6  7  8");
+        System.out.println("  +-----------------------+");
+
         for (int row = 0; row < size; row++) {
+            System.out.print(row + 1 + " | ");
             for (int col = 0; col < size; col++) {
                 ChessPiece piece = getNode(row, col).getPiece();
-
-                String pieceSymbol = "-";
+                String pieceSymbol = " - ";
 
                 if (piece != null) {
-                    pieceSymbol = piece.getClass().getSimpleName();
+                    switch (piece.getClass().getSimpleName()) {
+                        case "King":
+                            pieceSymbol = piece.getColor() == Color.WHITE ? "♔" : "♚";
+                            break;
+                        case "Queen":
+                            pieceSymbol = piece.getColor() == Color.WHITE ? "♕" : "♛";
+                            break;
+                        case "Rook":
+                            pieceSymbol = piece.getColor() == Color.WHITE ? "♖" : "♜";
+                            break;
+                        case "Bishop":
+                            pieceSymbol = piece.getColor() == Color.WHITE ? "♗" : "♝";
+                            break;
+                        case "Knight":
+                            pieceSymbol = piece.getColor() == Color.WHITE ? "♘" : "♞";
+                            break;
+                        case "Pawn":
+                            pieceSymbol = piece.getColor() == Color.WHITE ? "♙" : "♟";
+                            break;
+                    }
                 }
-                System.out.print(pieceSymbol + " ");
+                System.out.print(String.format("%2s", pieceSymbol));  // Use %4s for fixed 4 spaces
             }
-            System.out.println();
+            System.out.println(" | " + (row + 1));
         }
+
+        System.out.println(" +------------------------+");
+        System.out.println("    1  2  3  4  5  6  7  8");
     }
+
 
     private void addNode(ChessNode node) {
         int row = node.getRow();

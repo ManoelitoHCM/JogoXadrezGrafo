@@ -12,15 +12,12 @@ public class Game {
     private static Color currentPlayer;
 
     public static void main(String[] args) {
-        // Inicializa o tabuleiro
         chessBoard = ChessGraph.getGraphInstance();
         currentPlayer = Color.WHITE;
 
-        // Exibe o tabuleiro inicial
         System.out.println("Tabuleiro inicial:");
         chessBoard.display();
 
-        // Inicia a partida
         startGame();
     }
 
@@ -31,9 +28,9 @@ public class Game {
             System.out.println("É a vez do jogador " + currentPlayer);
             System.out.println("Digite a posição da peça que você deseja mover.");
             System.out.print("Linha: ");
-            int rowFrom = scanner.nextInt();
+            int rowFrom = scanner.nextInt() - 1;
             System.out.print("Coluna: ");
-            int colFrom = scanner.nextInt();
+            int colFrom = scanner.nextInt() - 1;
 
             ChessNode fromNode = chessBoard.getNode(rowFrom, colFrom);
             ChessPiece piece = fromNode.getPiece();
@@ -45,9 +42,9 @@ public class Game {
 
             System.out.println("Digite a posição para onde você deseja mover a peça.");
             System.out.print("Linha: ");
-            int rowTo = scanner.nextInt();
+            int rowTo = scanner.nextInt() - 1;
             System.out.print("Coluna: ");
-            int colTo = scanner.nextInt();
+            int colTo = scanner.nextInt() - 1;
 
             ChessNode toNode = chessBoard.getNode(rowTo, colTo);
 
@@ -65,23 +62,20 @@ public class Game {
                 continue;
             }
 
-            // Realiza o movimento
             piece.move(toNode);
             chessBoard.display();
 
-            // Verifica se houve um vencedor
             if (isWinner()) {
                 System.out.println("Jogador " + currentPlayer + " venceu!");
                 break;
             }
 
-            // Alterna para o próximo jogador
             currentPlayer = (currentPlayer == Color.WHITE) ? Color.BLACK : Color.WHITE;
         }
     }
 
     private static boolean isWinner() {
-        // Implemente a lógica para verificar se há um vencedor
+        // todo
         return false;
     }
 }
