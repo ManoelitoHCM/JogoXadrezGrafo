@@ -48,7 +48,7 @@ public class ChessNode {
     }
 
     public boolean isValidMove() {
-        return !this.hasPiece() || getPiece().isOpponentPiece(this);
+        return !this.hasPiece() || (this.getPiece() != null && this.getPiece().isOpponentPiece(this));
     }
 
     public Color getColor() {
