@@ -30,7 +30,7 @@ public class BreadthFirstSearch {
                     }
                 }
 
-                if (currentNode.isValidMove()) {
+                if (currentNode.isValidMove(startNode)) {
                     for (int[] offset : offsets) {
                         int newRow = piece.getCurrentNode().getRow() + offset[0];
                         int newCol = piece.getCurrentNode().getCol() + offset[1];

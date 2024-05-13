@@ -4,13 +4,10 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="746eebc3-2ec9-40e6-881f-096e6e66308e" name="Changes" comment="adição de offset das peças">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+    <list default="true" id="746eebc3-2ec9-40e6-881f-096e6e66308e" name="Changes" comment="ajuste inicio jogo">
       <change beforePath="$PROJECT_DIR$/src/board/ChessNode.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/board/ChessNode.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/chesspiece/ChessPiece.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/chesspiece/ChessPiece.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/chesspiece/Pawn.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/chesspiece/Pawn.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/game/Game.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/game/Game.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/search/BreadthFirstSearch.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/search/BreadthFirstSearch.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/search/DepthFirstSearch.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/search/DepthFirstSearch.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -72,38 +69,6 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1715268101893</updated>
-    </task>
-    <task id="LOCAL-00006" summary="aplicando singleton na matriz de adjacências para ter sempre apenas uma instância dela e do tabuleiro.">
-      <option name="closed" value="true" />
-      <created>1715363427505</created>
-      <option name="number" value="00006" />
-      <option name="presentableId" value="LOCAL-00006" />
-      <option name="project" value="LOCAL" />
-      <updated>1715363427505</updated>
-    </task>
-    <task id="LOCAL-00007" summary="Inicio da implementação de movimentação do peão">
-      <option name="closed" value="true" />
-      <created>1715365483437</created>
-      <option name="number" value="00007" />
-      <option name="presentableId" value="LOCAL-00007" />
-      <option name="project" value="LOCAL" />
-      <updated>1715365483437</updated>
-    </task>
-    <task id="LOCAL-00008" summary="Futura adequação para xadrez">
-      <option name="closed" value="true" />
-      <created>1715365509495</created>
-      <option name="number" value="00008" />
-      <option name="presentableId" value="LOCAL-00008" />
-      <option name="project" value="LOCAL" />
-      <updated>1715365509495</updated>
-    </task>
-    <task id="LOCAL-00009" summary="correção erro ortografico">
-      <option name="closed" value="true" />
-      <created>1715365525353</created>
-      <option name="number" value="00009" />
-      <option name="presentableId" value="LOCAL-00009" />
-      <option name="project" value="LOCAL" />
-      <updated>1715365525353</updated>
     </task>
     <task id="LOCAL-00010" summary="exclusão import desnecessario">
       <option name="closed" value="true" />
@@ -465,7 +430,39 @@
       <option name="project" value="LOCAL" />
       <updated>1715560801881</updated>
     </task>
-    <option name="localTasksCounter" value="55" />
+    <task id="LOCAL-00055" summary="ajuste no isOpponentPiece">
+      <option name="closed" value="true" />
+      <created>1715565625669</created>
+      <option name="number" value="00055" />
+      <option name="presentableId" value="LOCAL-00055" />
+      <option name="project" value="LOCAL" />
+      <updated>1715565625669</updated>
+    </task>
+    <task id="LOCAL-00056" summary="@super move">
+      <option name="closed" value="true" />
+      <created>1715565644811</created>
+      <option name="number" value="00056" />
+      <option name="presentableId" value="LOCAL-00056" />
+      <option name="project" value="LOCAL" />
+      <updated>1715565644811</updated>
+    </task>
+    <task id="LOCAL-00057" summary="ajuste isValidMove">
+      <option name="closed" value="true" />
+      <created>1715565653814</created>
+      <option name="number" value="00057" />
+      <option name="presentableId" value="LOCAL-00057" />
+      <option name="project" value="LOCAL" />
+      <updated>1715565653814</updated>
+    </task>
+    <task id="LOCAL-00058" summary="ajuste inicio jogo">
+      <option name="closed" value="true" />
+      <created>1715565671837</created>
+      <option name="number" value="00058" />
+      <option name="presentableId" value="LOCAL-00058" />
+      <option name="project" value="LOCAL" />
+      <updated>1715565671837</updated>
+    </task>
+    <option name="localTasksCounter" value="59" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -480,10 +477,6 @@
     </option>
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="remoção de métodos getNodes e getSize por não terem utilidade" />
-    <MESSAGE value="mudança de color para final" />
-    <MESSAGE value="remoção do método setCurrentNode, porque não deve haver nenhuma mudança nos nós uma vez o tabuleiro criado" />
-    <MESSAGE value="remoção de métodos não utilizados" />
     <MESSAGE value="remoção de import não utilizado" />
     <MESSAGE value="correção método" />
     <MESSAGE value="implementação do método createEdges" />
@@ -505,6 +498,10 @@
     <MESSAGE value="ajustes nos métodos de busca" />
     <MESSAGE value="." />
     <MESSAGE value="adição de offset das peças" />
-    <option name="LAST_COMMIT_MESSAGE" value="adição de offset das peças" />
+    <MESSAGE value="ajuste no isOpponentPiece" />
+    <MESSAGE value="@super move" />
+    <MESSAGE value="ajuste isValidMove" />
+    <MESSAGE value="ajuste inicio jogo" />
+    <option name="LAST_COMMIT_MESSAGE" value="ajuste inicio jogo" />
   </component>
 </project>

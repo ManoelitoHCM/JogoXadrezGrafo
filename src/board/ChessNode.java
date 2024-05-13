@@ -20,7 +20,6 @@ public class ChessNode {
         this.neighbors = new ArrayList<>();
         // regra para gerar as cores do tabuleiro
         this.color = (row + col) % 2 == 0 ? Color.WHITE : Color.BLACK;
-
     }
 
     public int getRow() {
@@ -47,8 +46,8 @@ public class ChessNode {
         this.piece = null;
     }
 
-    public boolean isValidMove() {
-        return !this.hasPiece() || (this.getPiece() != null && this.getPiece().isOpponentPiece(this));
+    public boolean isValidMove(ChessNode sourceNode) {
+        return !this.hasPiece() || (this.getPiece() != null && sourceNode.getPiece().isOpponentPiece(this));
     }
 
     public Color getColor() {
