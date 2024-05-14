@@ -4,11 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="746eebc3-2ec9-40e6-881f-096e6e66308e" name="Changes" comment="correção da condição de inimigo na diagonal">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/chesspiece/Pawn.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/chesspiece/Pawn.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/game/Game.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/game/Game.java" afterDir="false" />
-    </list>
+    <list default="true" id="746eebc3-2ec9-40e6-881f-096e6e66308e" name="Changes" comment="teste" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -48,7 +44,7 @@
   </component>
   <component name="PropertiesComponent"><![CDATA[{
   "keyToString": {
-    "Application.Game.executor": "Debug",
+    "Application.Game.executor": "Run",
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "SHARE_PROJECT_CONFIGURATION_FILES": "true",
     "git-widget-placeholder": "main",
@@ -69,22 +65,6 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1715268101893</updated>
-    </task>
-    <task id="LOCAL-00018" summary="correção de parametro de metodo">
-      <option name="closed" value="true" />
-      <created>1715436329904</created>
-      <option name="number" value="00018" />
-      <option name="presentableId" value="LOCAL-00018" />
-      <option name="project" value="LOCAL" />
-      <updated>1715436329904</updated>
-    </task>
-    <task id="LOCAL-00019" summary="remoção de import desnecessário">
-      <option name="closed" value="true" />
-      <created>1715436340304</created>
-      <option name="number" value="00019" />
-      <option name="presentableId" value="LOCAL-00019" />
-      <option name="project" value="LOCAL" />
-      <updated>1715436340304</updated>
     </task>
     <task id="LOCAL-00020" summary="remoção de import desnecessário">
       <option name="closed" value="true" />
@@ -462,7 +442,23 @@
       <option name="project" value="LOCAL" />
       <updated>1715688763875</updated>
     </task>
-    <option name="localTasksCounter" value="67" />
+    <task id="LOCAL-00067" summary="correção de lógica de movimento para diagonal">
+      <option name="closed" value="true" />
+      <created>1715690845852</created>
+      <option name="number" value="00067" />
+      <option name="presentableId" value="LOCAL-00067" />
+      <option name="project" value="LOCAL" />
+      <updated>1715690845852</updated>
+    </task>
+    <task id="LOCAL-00068" summary="teste">
+      <option name="closed" value="true" />
+      <created>1715690868084</created>
+      <option name="number" value="00068" />
+      <option name="presentableId" value="LOCAL-00068" />
+      <option name="project" value="LOCAL" />
+      <updated>1715690868084</updated>
+    </task>
+    <option name="localTasksCounter" value="69" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -477,8 +473,6 @@
     </option>
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="remoção método para alocação na classe de nó" />
-    <MESSAGE value="métodos de busca serão estáticos e remoção de interface" />
     <MESSAGE value="implementação do método BFS aplicado corretamente ao grafo" />
     <MESSAGE value="adicionando atributo ao metodo de listar movimentos e corrigindo retorno" />
     <MESSAGE value="otimização da inicialização do grafo" />
@@ -502,27 +496,8 @@
     <MESSAGE value="correção do input de linha e coluna" />
     <MESSAGE value="simplificação método isvalidmove" />
     <MESSAGE value="correção da condição de inimigo na diagonal" />
-    <option name="LAST_COMMIT_MESSAGE" value="correção da condição de inimigo na diagonal" />
-  </component>
-  <component name="XDebuggerManager">
-    <breakpoint-manager>
-      <breakpoints>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/game/Game.java</url>
-          <line>72</line>
-          <option name="timeStamp" value="3" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/game/Game.java</url>
-          <line>49</line>
-          <option name="timeStamp" value="5" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/game/Game.java</url>
-          <line>41</line>
-          <option name="timeStamp" value="6" />
-        </line-breakpoint>
-      </breakpoints>
-    </breakpoint-manager>
+    <MESSAGE value="correção de lógica de movimento para diagonal" />
+    <MESSAGE value="teste" />
+    <option name="LAST_COMMIT_MESSAGE" value="teste" />
   </component>
 </project>
