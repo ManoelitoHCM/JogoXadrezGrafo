@@ -3,8 +3,8 @@ package game;
 import board.ChessGraph;
 import board.ChessNode;
 import chesspiece.*;
+import exceptions.*;
 
-import java.util.List;
 import java.util.Scanner;
 
 public class Game {
@@ -34,8 +34,16 @@ public class Game {
             int colFrom = scanner.nextInt();
 
             ChessNode fromNode = chessBoard.getNode(rowFrom, colFrom);
+            if (fromNode == null || !fromNode.hasPiece()) {
+                System.out.println("Posição inválida ou não há peça na posição selecionada, tente novamente.");
+                continue;
+            }
+
             ChessPiece piece = fromNode.getPiece();
-            System.out.println(piece.getColor());
+            if (piece.getColor() != currentPlayer) {
+                System.out.println("Não é sua vez de jogar essa peça. Tente novamente.");
+                continue;
+            }
 
             System.out.println("A peça selecionada foi: " + piece.getClass().getSimpleName());
             System.out.println("Jogadas possíveis para a peça selecionada:");
@@ -49,21 +57,15 @@ public class Game {
 
             ChessNode toNode = chessBoard.getNode(rowTo, colTo);
 
-            if (fromNode == null || toNode == null) {
-                System.out.println("Posição inválida, tente novamente.");
+            Move move = new Move(fromNode, toNode);
+
+            try {
+                move.execute();
+            } catch (NoPieceOnNodeException | NotPlayersTurnException | InvalidMoveException e) {
+                System.out.println(e.getMessage());
                 continue;
             }
 
-            if (!fromNode.hasPiece()) {
-                continue;
-            }
-
-            if (!piece.filterValidMoves(fromNode).contains(toNode)) {
-                System.out.println("Movimento inválido, tente novamente.");
-                continue;
-            }
-
-            piece.move(toNode);
             chessBoard.display();
 
             if (isWinner()) {
@@ -76,7 +78,7 @@ public class Game {
     }
 
     private static boolean isWinner() {
-        // todo
+        // TODO: Implementar lógica de verificação de vencedor
         return false;
     }
 }
