@@ -4,6 +4,7 @@ import board.ChessGraph;
 import board.ChessNode;
 import chesspiece.*;
 
+import java.util.List;
 import java.util.Scanner;
 
 public class Game {
