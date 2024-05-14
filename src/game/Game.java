@@ -28,9 +28,9 @@ public class Game {
             System.out.println("É a vez do jogador " + currentPlayer);
             System.out.println("Digite a posição da peça que você deseja mover.");
             System.out.print("Linha: ");
-            int rowFrom = scanner.nextInt() - 1;
+            int rowFrom = scanner.nextInt();
             System.out.print("Coluna: ");
-            int colFrom = scanner.nextInt() - 1;
+            int colFrom = scanner.nextInt();
 
             ChessNode fromNode = chessBoard.getNode(rowFrom, colFrom);
             ChessPiece piece = fromNode.getPiece();
@@ -42,9 +42,9 @@ public class Game {
 
             System.out.println("Digite a posição para onde você deseja mover a peça.");
             System.out.print("Linha: ");
-            int rowTo = scanner.nextInt() - 1;
+            int rowTo = scanner.nextInt();
             System.out.print("Coluna: ");
-            int colTo = scanner.nextInt() - 1;
+            int colTo = scanner.nextInt();
 
             ChessNode toNode = chessBoard.getNode(rowTo, colTo);
 
