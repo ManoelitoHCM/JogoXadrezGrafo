@@ -1,6 +1,7 @@
 package chesspiece;
 
 import board.ChessNode;
+import exceptions.InvalidMoveException;
 
 public class Pawn extends ChessPiece {
 
@@ -51,7 +52,7 @@ public class Pawn extends ChessPiece {
     }
 
     @Override
-    public void move(ChessNode newNode) {
+    public void move(ChessNode newNode) throws InvalidMoveException {
         super.move(newNode);
         hasMoved = true;
     }
