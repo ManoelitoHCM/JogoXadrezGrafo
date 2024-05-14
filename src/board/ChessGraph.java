@@ -88,11 +88,11 @@ public class ChessGraph {
     }
 
     public void display() {
-        System.out.println("    1  2  3  4  5  6  7  8");
+        System.out.println("     0  1  2  3  4  5  6  7");
         System.out.println("  +-----------------------+");
 
         for (int row = 0; row < size; row++) {
-            System.out.print(row + 1 + " | ");
+            System.out.print(row + " |");
             for (int col = 0; col < size; col++) {
                 ChessPiece piece = getNode(row, col).getPiece();
                 String pieceSymbol = "-";
@@ -103,11 +103,11 @@ public class ChessGraph {
 
                 System.out.print(String.format("%3s", pieceSymbol));
             }
-            System.out.println(" | " + (row + 1));
+            System.out.println("| " + (row));
         }
 
         System.out.println(" +------------------------+");
-        System.out.println("    1  2  3  4  5  6  7  8");
+        System.out.println("     0  1  2  3  4  5  6  7");
     }
 
 
