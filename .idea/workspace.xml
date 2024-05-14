@@ -4,9 +4,12 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="746eebc3-2ec9-40e6-881f-096e6e66308e" name="Changes" comment="correção display">
+    <list default="true" id="746eebc3-2ec9-40e6-881f-096e6e66308e" name="Changes" comment="adição de lógica para detectar peça oponente na diagonal">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/board/ChessGraph.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/board/ChessGraph.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/board/ChessNode.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/board/ChessNode.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/chesspiece/Pawn.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/chesspiece/Pawn.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/game/Game.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/game/Game.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -68,14 +71,6 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1715268101893</updated>
-    </task>
-    <task id="LOCAL-00013" summary="implementação do método getPossibleMoves">
-      <option name="closed" value="true" />
-      <created>1715434006829</created>
-      <option name="number" value="00013" />
-      <option name="presentableId" value="LOCAL-00013" />
-      <option name="project" value="LOCAL" />
-      <updated>1715434006829</updated>
     </task>
     <task id="LOCAL-00014" summary="correção de parametro de metodo">
       <option name="closed" value="true" />
@@ -461,7 +456,15 @@
       <option name="project" value="LOCAL" />
       <updated>1715606247902</updated>
     </task>
-    <option name="localTasksCounter" value="62" />
+    <task id="LOCAL-00062" summary="adição de lógica para detectar peça oponente na diagonal">
+      <option name="closed" value="true" />
+      <created>1715607759810</created>
+      <option name="number" value="00062" />
+      <option name="presentableId" value="LOCAL-00062" />
+      <option name="project" value="LOCAL" />
+      <updated>1715607759810</updated>
+    </task>
+    <option name="localTasksCounter" value="63" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -476,7 +479,6 @@
     </option>
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="atribuição da variável neighbor" />
     <MESSAGE value="remoção método não utilizado" />
     <MESSAGE value="implementação da busca de nós válidos para a jogada" />
     <MESSAGE value="remoção da matriz - desnecessária" />
@@ -501,6 +503,7 @@
     <MESSAGE value="correção na lógica do 'isOpponent'" />
     <MESSAGE value="display" />
     <MESSAGE value="correção display" />
-    <option name="LAST_COMMIT_MESSAGE" value="correção display" />
+    <MESSAGE value="adição de lógica para detectar peça oponente na diagonal" />
+    <option name="LAST_COMMIT_MESSAGE" value="adição de lógica para detectar peça oponente na diagonal" />
   </component>
 </project>
