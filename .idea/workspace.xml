@@ -4,17 +4,10 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="746eebc3-2ec9-40e6-881f-096e6e66308e" name="Changes" comment="teste">
-      <change afterPath="$PROJECT_DIR$/src/exceptions/InvalidMoveException.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/exceptions/MoveOutOfBoundsException.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/exceptions/NoPieceOnNodeException.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/exceptions/NotPlayersTurnException.java" afterDir="false" />
+    <list default="true" id="746eebc3-2ec9-40e6-881f-096e6e66308e" name="Changes" comment="simplificação e otimização do tratamento de exceções">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/chesspiece/ChessPiece.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/chesspiece/ChessPiece.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/chesspiece/IChessPiece.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/chesspiece/IChessPiece.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/chesspiece/Pawn.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/chesspiece/Pawn.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/game/Game.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/game/Game.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/game/Move.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/game/Move.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/board/ChessGraph.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/board/ChessGraph.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/search/BreadthFirstSearch.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/search/BreadthFirstSearch.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -76,46 +69,6 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1715268101893</updated>
-    </task>
-    <task id="LOCAL-00021" summary="teste main">
-      <option name="closed" value="true" />
-      <created>1715436360610</created>
-      <option name="number" value="00021" />
-      <option name="presentableId" value="LOCAL-00021" />
-      <option name="project" value="LOCAL" />
-      <updated>1715436360610</updated>
-    </task>
-    <task id="LOCAL-00022" summary="ajuste nos métodos para criar e setar posição das peças do jogo">
-      <option name="closed" value="true" />
-      <created>1715440737808</created>
-      <option name="number" value="00022" />
-      <option name="presentableId" value="LOCAL-00022" />
-      <option name="project" value="LOCAL" />
-      <updated>1715440737808</updated>
-    </task>
-    <task id="LOCAL-00023" summary="ajuste no toString">
-      <option name="closed" value="true" />
-      <created>1715440749251</created>
-      <option name="number" value="00023" />
-      <option name="presentableId" value="LOCAL-00023" />
-      <option name="project" value="LOCAL" />
-      <updated>1715440749251</updated>
-    </task>
-    <task id="LOCAL-00024" summary="remoção de métodos getNodes e getSize por não terem utilidade">
-      <option name="closed" value="true" />
-      <created>1715440949648</created>
-      <option name="number" value="00024" />
-      <option name="presentableId" value="LOCAL-00024" />
-      <option name="project" value="LOCAL" />
-      <updated>1715440949648</updated>
-    </task>
-    <task id="LOCAL-00025" summary="mudança de color para final">
-      <option name="closed" value="true" />
-      <created>1715440959532</created>
-      <option name="number" value="00025" />
-      <option name="presentableId" value="LOCAL-00025" />
-      <option name="project" value="LOCAL" />
-      <updated>1715440959532</updated>
     </task>
     <task id="LOCAL-00026" summary="remoção do método setCurrentNode, porque não deve haver nenhuma mudança nos nós uma vez o tabuleiro criado">
       <option name="closed" value="true" />
@@ -469,7 +422,47 @@
       <option name="project" value="LOCAL" />
       <updated>1715690875054</updated>
     </task>
-    <option name="localTasksCounter" value="70" />
+    <task id="LOCAL-00070" summary="tratamento de exceções em relação a célula sem peça, movimento não previsto, movimento de peça fora do turno esperado...">
+      <option name="closed" value="true" />
+      <created>1715695291432</created>
+      <option name="number" value="00070" />
+      <option name="presentableId" value="LOCAL-00070" />
+      <option name="project" value="LOCAL" />
+      <updated>1715695291432</updated>
+    </task>
+    <task id="LOCAL-00071" summary="ajuste para tratamento de exceções">
+      <option name="closed" value="true" />
+      <created>1715695310689</created>
+      <option name="number" value="00071" />
+      <option name="presentableId" value="LOCAL-00071" />
+      <option name="project" value="LOCAL" />
+      <updated>1715695310689</updated>
+    </task>
+    <task id="LOCAL-00072" summary="inclusão da lógica de movimentaçáo de uma peça no tabuleiro em uma classe designada para reduzir as responsabilidades da classe Game">
+      <option name="closed" value="true" />
+      <created>1715695348052</created>
+      <option name="number" value="00072" />
+      <option name="presentableId" value="LOCAL-00072" />
+      <option name="project" value="LOCAL" />
+      <updated>1715695348052</updated>
+    </task>
+    <task id="LOCAL-00073" summary="ajuste de movimentação">
+      <option name="closed" value="true" />
+      <created>1715695357546</created>
+      <option name="number" value="00073" />
+      <option name="presentableId" value="LOCAL-00073" />
+      <option name="project" value="LOCAL" />
+      <updated>1715695357546</updated>
+    </task>
+    <task id="LOCAL-00074" summary="simplificação e otimização do tratamento de exceções">
+      <option name="closed" value="true" />
+      <created>1715695411012</created>
+      <option name="number" value="00074" />
+      <option name="presentableId" value="LOCAL-00074" />
+      <option name="project" value="LOCAL" />
+      <updated>1715695411012</updated>
+    </task>
+    <option name="localTasksCounter" value="75" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -484,11 +477,6 @@
     </option>
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="implementação do método BFS aplicado corretamente ao grafo" />
-    <MESSAGE value="adicionando atributo ao metodo de listar movimentos e corrigindo retorno" />
-    <MESSAGE value="otimização da inicialização do grafo" />
-    <MESSAGE value="remoção do optional" />
-    <MESSAGE value="implementação da verificação se peça é oponente + melhoria da movimentação" />
     <MESSAGE value="remoção da interface" />
     <MESSAGE value="ajuste do retorno da função offset" />
     <MESSAGE value="teste main" />
@@ -509,6 +497,11 @@
     <MESSAGE value="correção da condição de inimigo na diagonal" />
     <MESSAGE value="correção de lógica de movimento para diagonal" />
     <MESSAGE value="teste" />
-    <option name="LAST_COMMIT_MESSAGE" value="teste" />
+    <MESSAGE value="tratamento de exceções em relação a célula sem peça, movimento não previsto, movimento de peça fora do turno esperado..." />
+    <MESSAGE value="ajuste para tratamento de exceções" />
+    <MESSAGE value="inclusão da lógica de movimentaçáo de uma peça no tabuleiro em uma classe designada para reduzir as responsabilidades da classe Game" />
+    <MESSAGE value="ajuste de movimentação" />
+    <MESSAGE value="simplificação e otimização do tratamento de exceções" />
+    <option name="LAST_COMMIT_MESSAGE" value="simplificação e otimização do tratamento de exceções" />
   </component>
 </project>
