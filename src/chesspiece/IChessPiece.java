@@ -1,6 +1,7 @@
 package chesspiece;
 
 import board.ChessNode;
+import exceptions.InvalidMoveException;
 
 import java.util.List;
 
@@ -14,6 +15,6 @@ public interface IChessPiece {
 
     List<ChessNode> filterValidMoves(ChessNode currentNode);
 
-    void move(ChessNode newNode);
+    void move(ChessNode newNode) throws InvalidMoveException;
 
 }

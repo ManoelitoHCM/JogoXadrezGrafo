@@ -1,6 +1,7 @@
 package chesspiece;
 
 import board.ChessNode;
+import exceptions.InvalidMoveException;
 import search.BreadthFirstSearch;
 import search.DepthFirstSearch;
 
@@ -42,18 +43,18 @@ public abstract class ChessPiece implements IChessPiece {
         return BreadthFirstSearch.findPossibleMoves(currentNode);
     }
 
-    private boolean isValidMove(ChessNode newNode) {
+    public boolean isValidMove(ChessNode newNode) {
         return filterValidMoves(currentNode).contains(newNode);
     }
 
     @Override
-    public void move(ChessNode newNode) {
+    public void move(ChessNode newNode) throws InvalidMoveException {
         if (isValidMove(newNode)) {
             this.currentNode.removePiece();
             this.currentNode = newNode;
             newNode.setPiece(this);
         } else {
-            System.out.println("Jogada inválida.");
+            throw new InvalidMoveException("Movimento inválido de " + this.getClass().getSimpleName() + " para a posição (" + newNode.getRow() + ", " + newNode.getCol() + ").");
         }
     }
 }
