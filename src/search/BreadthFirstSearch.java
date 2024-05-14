@@ -2,6 +2,8 @@ package search;
 
 import board.ChessNode;
 import chesspiece.ChessPiece;
+import chesspiece.Color;
+import chesspiece.King;
 
 import java.util.*;
 
@@ -45,6 +47,45 @@ public class BreadthFirstSearch {
             return possibleMoves;
         } else {
             throw new NullPointerException("Não há peça nessa posição.");
+        }
+    }
+
+    public static ChessNode findOppositeKing(ChessNode startNode) {
+
+        ChessNode kingNode = null;
+        Set<ChessNode> visitedNodes = new HashSet<>();
+        Queue<ChessNode> queue = new LinkedList<>();
+
+        if (startNode.hasPiece()) {
+
+            visitedNodes.add(startNode);
+            queue.add(startNode);
+
+            while (!queue.isEmpty()) {
+                ChessNode currentNode = queue.poll();
+
+                for (ChessNode neighbor : currentNode.getNeighbors()) {
+                    if (!visitedNodes.contains(neighbor)) {
+                        visitedNodes.add(neighbor);
+                        queue.add(neighbor);
+                    }
+                }
+
+                if (currentNode.hasPiece() &&
+                        currentNode.getPiece().isOpponentPiece(startNode) &&
+                        currentNode.getPiece() instanceof King) {
+
+                    kingNode = currentNode;
+                    break;
+                }
+            }
+            if (kingNode != null) {
+                return kingNode;
+            } else {
+                throw new NoSuchElementException("Rei do adversário não encontrado no tabuleiro.");
+            }
+        } else {
+            throw new NullPointerException("Não há peça na posição inicial.");
         }
     }
 }
