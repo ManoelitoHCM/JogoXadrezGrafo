@@ -1,5 +1,6 @@
 package search;
 
+import board.ChessGraph;
 import board.ChessNode;
 import chesspiece.ChessPiece;
 import chesspiece.Color;
@@ -37,12 +38,13 @@ public class BreadthFirstSearch {
                         int newRow = piece.getCurrentNode().getRow() + offset[0];
                         int newCol = piece.getCurrentNode().getCol() + offset[1];
 
-                        if (currentNode.getRow() == newRow && currentNode.getCol() == newCol) {
-                            possibleMoves.add(currentNode);
+                        if (ChessGraph.getGraphInstance().isInBounds(newRow, newCol)) {
+                            if (currentNode.getRow() == newRow && currentNode.getCol() == newCol) {
+                                possibleMoves.add(currentNode);
+                            }
                         }
                     }
                 }
-
             }
             return possibleMoves;
         } else {
