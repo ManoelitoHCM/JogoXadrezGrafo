@@ -4,10 +4,12 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="746eebc3-2ec9-40e6-881f-096e6e66308e" name="Changes" comment="simplificação e otimização do tratamento de exceções">
+    <list default="true" id="746eebc3-2ec9-40e6-881f-096e6e66308e" name="Changes" comment="verificação se novas coordenadas estão dentro do tabuleiro">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/board/ChessGraph.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/board/ChessGraph.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/search/BreadthFirstSearch.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/search/BreadthFirstSearch.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/chesspiece/Bishop.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/chesspiece/Bishop.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/chesspiece/King.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/chesspiece/King.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/game/Game.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/game/Game.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -69,38 +71,6 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1715268101893</updated>
-    </task>
-    <task id="LOCAL-00026" summary="remoção do método setCurrentNode, porque não deve haver nenhuma mudança nos nós uma vez o tabuleiro criado">
-      <option name="closed" value="true" />
-      <created>1715440986513</created>
-      <option name="number" value="00026" />
-      <option name="presentableId" value="LOCAL-00026" />
-      <option name="project" value="LOCAL" />
-      <updated>1715440986513</updated>
-    </task>
-    <task id="LOCAL-00027" summary="remoção de métodos não utilizados">
-      <option name="closed" value="true" />
-      <created>1715440996634</created>
-      <option name="number" value="00027" />
-      <option name="presentableId" value="LOCAL-00027" />
-      <option name="project" value="LOCAL" />
-      <updated>1715440996634</updated>
-    </task>
-    <task id="LOCAL-00028" summary="remoção de import não utilizado">
-      <option name="closed" value="true" />
-      <created>1715441006724</created>
-      <option name="number" value="00028" />
-      <option name="presentableId" value="LOCAL-00028" />
-      <option name="project" value="LOCAL" />
-      <updated>1715441006724</updated>
-    </task>
-    <task id="LOCAL-00029" summary=".">
-      <option name="closed" value="true" />
-      <created>1715441033105</created>
-      <option name="number" value="00029" />
-      <option name="presentableId" value="LOCAL-00029" />
-      <option name="project" value="LOCAL" />
-      <updated>1715441033105</updated>
     </task>
     <task id="LOCAL-00030" summary=".">
       <option name="closed" value="true" />
@@ -462,7 +432,39 @@
       <option name="project" value="LOCAL" />
       <updated>1715695411012</updated>
     </task>
-    <option name="localTasksCounter" value="75" />
+    <task id="LOCAL-00075" summary="adição do método &quot;findKing&quot; para xeque">
+      <option name="closed" value="true" />
+      <created>1715717966829</created>
+      <option name="number" value="00075" />
+      <option name="presentableId" value="LOCAL-00075" />
+      <option name="project" value="LOCAL" />
+      <updated>1715717966829</updated>
+    </task>
+    <task id="LOCAL-00076" summary="adição do método &quot;findKing&quot; para xeque">
+      <option name="closed" value="true" />
+      <created>1715717984211</created>
+      <option name="number" value="00076" />
+      <option name="presentableId" value="LOCAL-00076" />
+      <option name="project" value="LOCAL" />
+      <updated>1715717984211</updated>
+    </task>
+    <task id="LOCAL-00077" summary="correção offset bispo">
+      <option name="closed" value="true" />
+      <created>1715790332666</created>
+      <option name="number" value="00077" />
+      <option name="presentableId" value="LOCAL-00077" />
+      <option name="project" value="LOCAL" />
+      <updated>1715790332666</updated>
+    </task>
+    <task id="LOCAL-00078" summary="verificação se novas coordenadas estão dentro do tabuleiro">
+      <option name="closed" value="true" />
+      <created>1715790348446</created>
+      <option name="number" value="00078" />
+      <option name="presentableId" value="LOCAL-00078" />
+      <option name="project" value="LOCAL" />
+      <updated>1715790348446</updated>
+    </task>
+    <option name="localTasksCounter" value="79" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -477,9 +479,6 @@
     </option>
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="remoção da interface" />
-    <MESSAGE value="ajuste do retorno da função offset" />
-    <MESSAGE value="teste main" />
     <MESSAGE value="ajustes nos métodos de busca" />
     <MESSAGE value="." />
     <MESSAGE value="adição de offset das peças" />
@@ -502,6 +501,20 @@
     <MESSAGE value="inclusão da lógica de movimentaçáo de uma peça no tabuleiro em uma classe designada para reduzir as responsabilidades da classe Game" />
     <MESSAGE value="ajuste de movimentação" />
     <MESSAGE value="simplificação e otimização do tratamento de exceções" />
-    <option name="LAST_COMMIT_MESSAGE" value="simplificação e otimização do tratamento de exceções" />
+    <MESSAGE value="adição do método &quot;findKing&quot; para xeque" />
+    <MESSAGE value="correção offset bispo" />
+    <MESSAGE value="verificação se novas coordenadas estão dentro do tabuleiro" />
+    <option name="LAST_COMMIT_MESSAGE" value="verificação se novas coordenadas estão dentro do tabuleiro" />
+  </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <breakpoints>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/search/BreadthFirstSearch.java</url>
+          <line>40</line>
+          <option name="timeStamp" value="1" />
+        </line-breakpoint>
+      </breakpoints>
+    </breakpoint-manager>
   </component>
 </project>

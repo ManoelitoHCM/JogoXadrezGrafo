@@ -10,7 +10,7 @@ public class Bishop extends ChessPiece {
 
     @Override
     public int[][] getOffsets() {
-        int size = 28;
+        int size = 7 * 4;
         int[][] offsets = new int[size][2];
         int index = 0;
 
