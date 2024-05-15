@@ -10,7 +10,7 @@ public class King extends ChessPiece {
 
     @Override
     public int[][] getOffsets() {
-        int size = 7 * 8 + 1;
+        int size = 7 * 8;
         int[][] offsets = new int[size][2];
         int index = 0;
 
