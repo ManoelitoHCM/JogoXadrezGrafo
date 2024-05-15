@@ -4,11 +4,11 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="746eebc3-2ec9-40e6-881f-096e6e66308e" name="Changes" comment="verificação se novas coordenadas estão dentro do tabuleiro">
+    <list default="true" id="746eebc3-2ec9-40e6-881f-096e6e66308e" name="Changes" comment="ajuste offset">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/board/ChessGraph.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/board/ChessGraph.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/chesspiece/Bishop.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/chesspiece/Bishop.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/chesspiece/King.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/chesspiece/King.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/chesspiece/ChessPiece.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/chesspiece/ChessPiece.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/chesspiece/Pawn.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/chesspiece/Pawn.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/game/Game.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/game/Game.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -71,46 +71,6 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1715268101893</updated>
-    </task>
-    <task id="LOCAL-00030" summary=".">
-      <option name="closed" value="true" />
-      <created>1715441079022</created>
-      <option name="number" value="00030" />
-      <option name="presentableId" value="LOCAL-00030" />
-      <option name="project" value="LOCAL" />
-      <updated>1715441079022</updated>
-    </task>
-    <task id="LOCAL-00031" summary="correção método">
-      <option name="closed" value="true" />
-      <created>1715450978972</created>
-      <option name="number" value="00031" />
-      <option name="presentableId" value="LOCAL-00031" />
-      <option name="project" value="LOCAL" />
-      <updated>1715450978972</updated>
-    </task>
-    <task id="LOCAL-00032" summary="implementação do método createEdges">
-      <option name="closed" value="true" />
-      <created>1715451024233</created>
-      <option name="number" value="00032" />
-      <option name="presentableId" value="LOCAL-00032" />
-      <option name="project" value="LOCAL" />
-      <updated>1715451024233</updated>
-    </task>
-    <task id="LOCAL-00033" summary="atribuição da variável neighbor">
-      <option name="closed" value="true" />
-      <created>1715451049399</created>
-      <option name="number" value="00033" />
-      <option name="presentableId" value="LOCAL-00033" />
-      <option name="project" value="LOCAL" />
-      <updated>1715451049399</updated>
-    </task>
-    <task id="LOCAL-00034" summary="teste main">
-      <option name="closed" value="true" />
-      <created>1715451062253</created>
-      <option name="number" value="00034" />
-      <option name="presentableId" value="LOCAL-00034" />
-      <option name="project" value="LOCAL" />
-      <updated>1715451062253</updated>
     </task>
     <task id="LOCAL-00035" summary="remoção método não utilizado">
       <option name="closed" value="true" />
@@ -464,7 +424,47 @@
       <option name="project" value="LOCAL" />
       <updated>1715790348446</updated>
     </task>
-    <option name="localTasksCounter" value="79" />
+    <task id="LOCAL-00079" summary="ajuste size">
+      <option name="closed" value="true" />
+      <created>1715791599040</created>
+      <option name="number" value="00079" />
+      <option name="presentableId" value="LOCAL-00079" />
+      <option name="project" value="LOCAL" />
+      <updated>1715791599040</updated>
+    </task>
+    <task id="LOCAL-00080" summary="ajuste offset">
+      <option name="closed" value="true" />
+      <created>1715791606167</created>
+      <option name="number" value="00080" />
+      <option name="presentableId" value="LOCAL-00080" />
+      <option name="project" value="LOCAL" />
+      <updated>1715791606167</updated>
+    </task>
+    <task id="LOCAL-00081" summary="ajuste offset">
+      <option name="closed" value="true" />
+      <created>1715791707522</created>
+      <option name="number" value="00081" />
+      <option name="presentableId" value="LOCAL-00081" />
+      <option name="project" value="LOCAL" />
+      <updated>1715791707522</updated>
+    </task>
+    <task id="LOCAL-00082" summary="ajuste offset">
+      <option name="closed" value="true" />
+      <created>1715791761295</created>
+      <option name="number" value="00082" />
+      <option name="presentableId" value="LOCAL-00082" />
+      <option name="project" value="LOCAL" />
+      <updated>1715791761295</updated>
+    </task>
+    <task id="LOCAL-00083" summary="ajuste offset">
+      <option name="closed" value="true" />
+      <created>1715791913576</created>
+      <option name="number" value="00083" />
+      <option name="presentableId" value="LOCAL-00083" />
+      <option name="project" value="LOCAL" />
+      <updated>1715791913576</updated>
+    </task>
+    <option name="localTasksCounter" value="84" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -479,8 +479,6 @@
     </option>
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="ajustes nos métodos de busca" />
-    <MESSAGE value="." />
     <MESSAGE value="adição de offset das peças" />
     <MESSAGE value="ajuste no isOpponentPiece" />
     <MESSAGE value="@super move" />
@@ -504,17 +502,8 @@
     <MESSAGE value="adição do método &quot;findKing&quot; para xeque" />
     <MESSAGE value="correção offset bispo" />
     <MESSAGE value="verificação se novas coordenadas estão dentro do tabuleiro" />
-    <option name="LAST_COMMIT_MESSAGE" value="verificação se novas coordenadas estão dentro do tabuleiro" />
-  </component>
-  <component name="XDebuggerManager">
-    <breakpoint-manager>
-      <breakpoints>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/search/BreadthFirstSearch.java</url>
-          <line>40</line>
-          <option name="timeStamp" value="1" />
-        </line-breakpoint>
-      </breakpoints>
-    </breakpoint-manager>
+    <MESSAGE value="ajuste size" />
+    <MESSAGE value="ajuste offset" />
+    <option name="LAST_COMMIT_MESSAGE" value="ajuste offset" />
   </component>
 </project>
