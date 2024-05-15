@@ -4,6 +4,7 @@ import board.ChessGraph;
 import board.ChessNode;
 import chesspiece.*;
 import exceptions.*;
+import search.BreadthFirstSearch;
 
 import java.util.Scanner;
 
