@@ -32,6 +32,10 @@ public abstract class ChessPiece implements IChessPiece {
         return currentNode;
     }
 
+    public void setCurrentNode(ChessNode newNode) {
+        this.currentNode = newNode;
+    }
+
     public boolean isOpponentPiece(ChessNode newNode) {
         return newNode.getPiece().getColor() != this.getColor();
     }
