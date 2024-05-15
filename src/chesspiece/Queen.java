@@ -10,15 +10,41 @@ public class Queen extends ChessPiece {
 
     @Override
     public int[][] getOffsets() {
-        return new int[][]{
-            {0, 1},     // movimento para frente
-            {0, -1},    // movimento para trás
-            {1, 0},     // movimento para direita
-            {-1, 0},    // movimento para esquerda
-            {1, 1},     // diagonal superior direita
-            {1, -1},    // diagonal superior esquerda
-            {-1, 1},    // diagonal inferior direita
-            {-1, -1}    // diagonal inferior esquerda
-        };
+        int size = 7 * 8;
+        int[][] offsets = new int[size][2];
+        int index = 0;
+
+        for (int i = 7; i >= -7; i--) {
+            if (i != 0) {
+                offsets[index][0] = i;
+                offsets[index][1] = i;
+                index++;
+            }
+        }
+
+        for (int i = -7; i <= 7; i++) {
+            if (i != 0) {
+                offsets[index][0] = i;
+                offsets[index][1] = -i;
+                index++;
+            }
+        }
+
+        for (int i = 7; i >= -7; i--) {
+            if (i != 0) {
+                offsets[index][0] = i;
+                offsets[index][1] = 0;
+                index++;
+            }
+        }
+
+        for (int i = 7; i >= -7; i--) {
+            if (i != 0) {
+                offsets[index][0] = 0;
+                offsets[index][1] = i;
+                index++;
+            }
+        }
+        return offsets;
     }
 }
