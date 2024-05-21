@@ -95,15 +95,17 @@ public class ChessGraph {
             System.out.print(row + " |");
             for (int col = 0; col < size; col++) {
                 ChessPiece piece = getNode(row, col).getPiece();
-                String pieceSymbol = "-";
+                String pieceSymbol = "--";
 
                 if (piece != null) {
-                    pieceSymbol = String.valueOf(piece.getClass().getSimpleName().charAt(0)).toUpperCase();
+                    char pieceInitial = piece.getClass().getSimpleName().charAt(0);
+                    char colorInitial = piece.getColor() == Color.WHITE ? 'W' : 'B';
+                    pieceSymbol = "" + colorInitial + pieceInitial;
                 }
 
                 System.out.print(String.format("%3s", pieceSymbol));
             }
-            System.out.println("| " + (row));
+            System.out.println("| " + row);
         }
 
         System.out.println(" +------------------------+");
