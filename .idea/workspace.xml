@@ -4,10 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="746eebc3-2ec9-40e6-881f-096e6e66308e" name="Changes" comment="adição do método setcurrentnode">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/board/ChessGraph.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/board/ChessGraph.java" afterDir="false" />
-    </list>
+    <list default="true" id="746eebc3-2ec9-40e6-881f-096e6e66308e" name="Changes" comment="ajuste no display para que conste jogador + peça" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -68,14 +65,6 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1715268101893</updated>
-    </task>
-    <task id="LOCAL-00039" summary="ajustes em alguns métodos desnecessários na classe do tabuleiro e realocação na classe de nó">
-      <option name="closed" value="true" />
-      <created>1715525657981</created>
-      <option name="number" value="00039" />
-      <option name="presentableId" value="LOCAL-00039" />
-      <option name="project" value="LOCAL" />
-      <updated>1715525657981</updated>
     </task>
     <task id="LOCAL-00040" summary="remoção método para alocação na classe de nó">
       <option name="closed" value="true" />
@@ -461,7 +450,15 @@
       <option name="project" value="LOCAL" />
       <updated>1715793311802</updated>
     </task>
-    <option name="localTasksCounter" value="88" />
+    <task id="LOCAL-00088" summary="ajuste no display para que conste jogador + peça">
+      <option name="closed" value="true" />
+      <created>1716254157035</created>
+      <option name="number" value="00088" />
+      <option name="presentableId" value="LOCAL-00088" />
+      <option name="project" value="LOCAL" />
+      <updated>1716254157036</updated>
+    </task>
+    <option name="localTasksCounter" value="89" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -476,7 +473,6 @@
     </option>
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="ajuste isValidMove" />
     <MESSAGE value="ajuste inicio jogo" />
     <MESSAGE value="correção na lógica do 'isOpponent'" />
     <MESSAGE value="display" />
@@ -501,6 +497,7 @@
     <MESSAGE value="remoção import desnecessário" />
     <MESSAGE value="lógica para promoção do peão" />
     <MESSAGE value="adição do método setcurrentnode" />
-    <option name="LAST_COMMIT_MESSAGE" value="adição do método setcurrentnode" />
+    <MESSAGE value="ajuste no display para que conste jogador + peça" />
+    <option name="LAST_COMMIT_MESSAGE" value="ajuste no display para que conste jogador + peça" />
   </component>
 </project>
