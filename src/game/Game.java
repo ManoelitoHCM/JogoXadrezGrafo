@@ -69,7 +69,7 @@ public class Game {
 
             chessBoard.display();
 
-            if (isWinner(fromNode)) {
+            if (isWinner(toNode)) {
                 System.out.println("Jogador " + currentPlayer + " venceu!");
                 break;
             }
