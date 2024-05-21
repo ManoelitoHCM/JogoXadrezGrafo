@@ -69,7 +69,7 @@ public class Game {
 
             chessBoard.display();
 
-            if (isWinner()) {
+            if (isWinner(fromNode)) {
                 System.out.println("Jogador " + currentPlayer + " venceu!");
                 break;
             }
@@ -78,8 +78,7 @@ public class Game {
         }
     }
 
-    private static boolean isWinner() {
-        // TODO: Implementar lógica de verificação de vencedor
-        return false;
+    private static boolean isWinner(ChessNode node) {
+        return BreadthFirstSearch.findOppositeKing(node) == null;
     }
 }

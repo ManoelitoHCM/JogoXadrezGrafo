@@ -5,6 +5,7 @@ import chesspiece.ChessPiece;
 import exceptions.InvalidMoveException;
 import exceptions.NoPieceOnNodeException;
 import exceptions.NotPlayersTurnException;
+import search.BreadthFirstSearch;
 
 public class Move {
     private ChessNode fromNode;
@@ -35,6 +36,16 @@ public class Move {
         }
 
         piece.move(toNode);
+
+        isInCheckmate(toNode);
+    }
+
+    private void isInCheckmate (ChessNode node) {
+        ChessNode opponentKing = BreadthFirstSearch.findOppositeKing(node);
+
+        if (node.getPiece().filterValidMoves(node).contains(opponentKing)) {
+            System.out.println("Esse movimento põe o rei em cheque. ");
+        }
     }
 
     public ChessPiece getPiece() {
